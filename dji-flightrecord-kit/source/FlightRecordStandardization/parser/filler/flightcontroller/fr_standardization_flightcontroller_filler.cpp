@@ -33,6 +33,8 @@ static bool FillOSDData(const dji_fc_osd_push& data_source,
     output->set_aircraftLocation(aircraft_location);
     
     output->set_altitude(data_source.barometer_height * 0.1);
+
+    output->set_vps_altitude(data_source.QXBTzpVpVljFKBAc * 0.1);
     
     output->set_flightMode((FlightMode)data_source.control_mode);
     

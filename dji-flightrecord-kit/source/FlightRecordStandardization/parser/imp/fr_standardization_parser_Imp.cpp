@@ -1014,7 +1014,7 @@ SDKError ParserImp::filterFrameTimeList(std::map<FlightRecordDataType, bool> fil
         
         bool fill_operation_result = true;
         SDKError error_code = SDKError::Success;
-        
+
         do {
             switch (data_type) {
                 case RCFlightRecordDataType:
@@ -1045,6 +1045,66 @@ SDKError ParserImp::filterFrameTimeList(std::map<FlightRecordDataType, bool> fil
                     dji_fc_osd_push osd = {0};
                     memcpy(&osd, buffer, std::min((size_t)length, sizeof(osd)));
                     drone_type_ = (DJI::FlightRecord::DroneType)osd.droneType;
+
+                    /*printf("OSD struct : \n");
+                    printf("longitude : <%f>\n", osd.longitude);
+                    printf("latitude : <%f>\n", osd.latitude);
+                    printf("barometer_height : <%d>\n", osd.barometer_height);
+                    printf("speed_x : <%d>\n", osd.speed_x);
+                    printf("speed_y : <%d>\n", osd.speed_y);
+                    printf("speed_z : <%d>\n", osd.speed_z);
+                    printf("pitch : <%d>\n", osd.pitch);
+                    printf("roll : <%d>\n", osd.roll);
+                    printf("yaw : <%d>\n", osd.yaw);
+                    printf("control_mode : <%u>\n", osd.control_mode);
+                    printf("rc_outcontrol : <%u>\n", osd.rc_outcontrol);
+                    printf("flycCommand : <%u>\n", osd.FcLIaBnHGrIdCPae);
+                    printf("canIOCWork : <%u>\n", osd.alXJEnnqKohpOrIv);
+                    printf("groundOrSky : <%u>\n", osd.groundOrSky);
+                    printf("isMotorUp : <%u>\n", osd.isMotorUp);
+                    printf("isSwaveWork : <%u>\n", osd.FyPwzqNxTELNHBFq);
+                    printf("GoHomeStatus : <%u>\n", osd.BDnRRfEKLIFHPbYk);
+                    printf("isVisionUsed : <%u>\n", osd.owwcYsTwwGyawhTh);
+                    printf("batteryWarning : <%u>\n", osd.batteryWarning);
+                    printf("PPqGKRDqqvfWaPEN : <%u>\n", osd.PPqGKRDqqvfWaPEN);
+                    printf("isImuPreheated : <%u>\n", osd.NTWSdyzVyGjeZytv);
+                    printf("modeChannel : <%u>\n", osd.vxLdBoDOQIKNvesn);
+                    printf("isGPSValid : <%u>\n", osd.isGPSValid);
+                    printf("isCompassError : <%u>\n", osd.isCompassError);
+                    printf("waveError : <%u>\n", osd.HJFuZjYdhVqQYybR);
+                    printf("gpsSignalLevel : <%u>\n", osd.gpsSignalLevel);
+                    printf("batteryType : <%u>\n", osd.BeqludSZijuZuhVJ);
+                    printf("isOutOfLimit : <%u>\n", osd.FuMAiwCgVLJzMQki);
+                    printf("isGoHomeHeightModified : <%u>\n", osd.MDFMUARFxhpdJtmI);
+                    printf("isPropellerCatapult : <%u>\n", osd.lRLOYosJLeInQfmo);
+                    printf("isMotorBlocked : <%u>\n", osd.dbBvkdKrlcmvZarp);
+                    printf("isNotEnoughForce : <%u>\n", osd.sHDpcOoUTOCyuKeV);
+                    printf("isBarometerDeadInAir : <%u>\n", osd.mOEVFFHhLfbwkMYj);
+                    printf("isVibrating : <%u>\n", osd.zLsFXPLyQrHXFFUf);
+                    printf("isAcceletorOverRange : <%u>\n", osd.SBVtcuthJBEgAhpq);
+                    printf("gps_num : <%u>\n", osd.gps_num);
+                    printf("flighAction : <%u>\n", osd.kRkpOaMocJqXhYiC);
+                    printf("motorStartFailedCause : <%u>\n", osd.wJpEViPlInceBxUJ);
+                    printf("sfLKJziSEyBkGWYo : <%u>\n", osd.sfLKJziSEyBkGWYo);
+                    printf("nonGpsCause : <%u>\n", osd.NDZtBUirCTogtANe);
+                    printf("waypointLimitMode : <%u>\n", osd.aklFKRILmiQEdRGR);
+                    printf("GDxNbhaHjMNkkVZj : <%u>\n", osd.GDxNbhaHjMNkkVZj);
+                    printf("hOFRFXHicubKMlDx : <%u>\n", osd.hOFRFXHicubKMlDx);
+                    printf("ZWTfUyiWnoIXzHvU : <%u>\n", osd.ZWTfUyiWnoIXzHvU);
+                    printf("battery : <%u>\n", osd.EfrqbiuncIQowIcw);
+                    printf("sWaveHeight : <%u>\n", osd.QXBTzpVpVljFKBAc);
+                    printf("lastFlightTime : <%u>\n", osd.lastFlightTime);
+                    printf("startUpTimes : <%u>\n", osd.startUpTimes);
+                    printf("itVJTUmVhBSRyFyP : <%u>\n", osd.itVJTUmVhBSRyFyP);
+                    printf("qDnfgctEHRqWvwNB : <%u>\n", osd.qDnfgctEHRqWvwNB);
+                    printf("YeiIzOEFVCzhMWuf : <%u>\n", osd.YeiIzOEFVCzhMWuf);
+                    printf("mbPYYKtaKTRiSNrF : <%u>\n", osd.mbPYYKtaKTRiSNrF);
+                    printf("versionC : <%u>\n", osd.versionC);
+                    printf("droneType : <%u>\n", osd.droneType);
+                    printf("ImuInitFailReason : <%u>\n", osd.sXVeYVkmfPPqVmfH);
+                    printf("apvMQrDukxndFPXS : <%u>\n", osd.apvMQrDukxndFPXS);
+                    printf("ctrlDevice : <%u>\n", osd.nXvqtfHDnlzNwKsq);
+                    printf("ZCmCGCIrRKmoBDwU : <%u>\n\n", osd.ZCmCGCIrRKmoBDwU);*/
                     
                     fill_operation_result = fillFlightController(data_type, buffer, length, frame_time);
                     if (fill_operation_result == false) {

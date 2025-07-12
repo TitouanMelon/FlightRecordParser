@@ -176,8 +176,16 @@ float FlightControllerStateImp::altitude() const {
     return altitude_;
 }
 
+float FlightControllerStateImp::vps_altitude() const {
+    return vps_altitude_;
+}
+
 void FlightControllerStateImp::set_altitude(float altitude) {
     altitude_ = altitude;
+}
+
+void FlightControllerStateImp::set_vps_altitude(float vps_altitude) {
+    vps_altitude_ = vps_altitude;
 }
 
 FlightMode FlightControllerStateImp::flightMode() const {

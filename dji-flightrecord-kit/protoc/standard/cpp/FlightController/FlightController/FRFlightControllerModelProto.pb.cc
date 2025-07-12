@@ -944,6 +944,8 @@ void VirtualStickFlightControlData::Clear() {
 
 const char* VirtualStickFlightControlData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  printf("Start parse from reccord-kit>protoc>standard>FlControl>FlControl");
+
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -1493,6 +1495,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
+    printf("Handled tag :  <%d>", tag);
     switch (tag >> 3) {
       // .DJIFRProto.Standard.Attitude attitude = 1;
       case 1:
@@ -1732,6 +1735,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       default:
+        printf("Case %d (%d) not handled", tag, static_cast<uint8_t>(tag));
         goto handle_unusual;
     }  // switch
   handle_unusual:
@@ -1799,6 +1803,15 @@ uint8_t* FlightControllerState::_InternalSerialize(
   if (raw_altitude != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_altitude(), target);
+  }
+
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_vps_altitude(), target);
   }
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2029,6 +2042,14 @@ size_t FlightControllerState::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    total_size += 1 + 4;
+  }
+
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
   if (this->_internal_flightmode() != 0) {
     total_size += 1 +
@@ -2209,6 +2230,13 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
   if (raw_altitude != 0) {
     _this->_internal_set_altitude(from._internal_altitude());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = from._internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    _this->_internal_set_vps_altitude(from._internal_vps_altitude());
   }
   if (from._internal_flightmode() != 0) {
     _this->_internal_set_flightmode(from._internal_flightmode());

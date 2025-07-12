@@ -1736,32 +1736,33 @@ class FlightControllerState final :
     kAttitudeFieldNumber = 1,
     kHomeLocationCoordinateFieldNumber = 2,
     kAircraftLocationFieldNumber = 4,
-    kVirtualControlDataFieldNumber = 14,
-    kVelocityFieldNumber = 26,
+    kVirtualControlDataFieldNumber = 15,
+    kVelocityFieldNumber = 27,
     kTakeoffLocationAltitudeFieldNumber = 3,
     kAltitudeFieldNumber = 5,
-    kFlightModeFieldNumber = 6,
-    kGPSSignalLevelFieldNumber = 7,
-    kSatelliteCountFieldNumber = 8,
-    kRemainingFlightTimeFieldNumber = 9,
-    kBatteryPercentageNeededToLandFromCurrentHeightFieldNumber = 10,
-    kBatteryPercentageNeededToGoHomeFieldNumber = 11,
-    kSmartRTHStateFieldNumber = 12,
-    kBehaviorFieldNumber = 13,
-    kIsFailsafeEnabledFieldNumber = 15,
-    kAreMotorsOnFieldNumber = 16,
-    kIsHomeLocationSetFieldNumber = 17,
-    kIsLandingConfirmationNeededFieldNumber = 18,
-    kWindWarningFieldNumber = 21,
-    kCountOfFlightsFieldNumber = 22,
-    kHasReachedMaxFlightHeightFieldNumber = 19,
-    kHasReachedMaxFlightRadiusFieldNumber = 20,
-    kIsFlyingFieldNumber = 24,
-    kIsGPSBeingUsedFieldNumber = 27,
-    kFlightLogIndexFieldNumber = 23,
-    kSmartRTHCountdownFieldNumber = 25,
-    kFlightTimeInSecondsFieldNumber = 28,
-    kCumulativeFlightDistanceFieldNumber = 29,
+    kVpsAltitudeFieldNumber = 6,
+    kFlightModeFieldNumber = 7,
+    kGPSSignalLevelFieldNumber = 8,
+    kSatelliteCountFieldNumber = 9,
+    kRemainingFlightTimeFieldNumber = 10,
+    kBatteryPercentageNeededToLandFromCurrentHeightFieldNumber = 11,
+    kBatteryPercentageNeededToGoHomeFieldNumber = 12,
+    kSmartRTHStateFieldNumber = 13,
+    kBehaviorFieldNumber = 14,
+    kIsFailsafeEnabledFieldNumber = 16,
+    kAreMotorsOnFieldNumber = 17,
+    kIsHomeLocationSetFieldNumber = 18,
+    kIsLandingConfirmationNeededFieldNumber = 19,
+    kWindWarningFieldNumber = 22,
+    kCountOfFlightsFieldNumber = 23,
+    kHasReachedMaxFlightHeightFieldNumber = 20,
+    kHasReachedMaxFlightRadiusFieldNumber = 21,
+    kIsFlyingFieldNumber = 25,
+    kIsGPSBeingUsedFieldNumber = 28,
+    kFlightLogIndexFieldNumber = 24,
+    kSmartRTHCountdownFieldNumber = 26,
+    kFlightTimeInSecondsFieldNumber = 29,
+    kCumulativeFlightDistanceFieldNumber = 30,
   };
   // .DJIFRProto.Standard.Attitude attitude = 1;
   bool has_attitude() const;
@@ -1869,6 +1870,15 @@ class FlightControllerState final :
   private:
   float _internal_altitude() const;
   void _internal_set_altitude(float value);
+  public:
+
+   // float vps_altitude = 6;
+  void clear_vps_altitude();
+  float vps_altitude() const;
+  void set_vps_altitude(float value);
+  private:
+  float _internal_vps_altitude() const;
+  void _internal_set_vps_altitude(float value);
   public:
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2084,6 +2094,7 @@ class FlightControllerState final :
     ::DJIFRProto::Standard::Velocity* velocity_;
     float takeofflocationaltitude_;
     float altitude_;
+    float vps_altitude_;
     int flightmode_;
     int gpssignallevel_;
     int32_t satellitecount_;
@@ -2607,6 +2618,26 @@ inline void FlightControllerState::_internal_set_altitude(float value) {
 inline void FlightControllerState::set_altitude(float value) {
   _internal_set_altitude(value);
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.altitude)
+}
+
+// float vps_altitude = 6;
+inline void FlightControllerState::clear_vps_altitude() {
+  _impl_.vps_altitude_ = 0;
+}
+inline float FlightControllerState::_internal_vps_altitude() const {
+  return _impl_.vps_altitude_;
+}
+inline float FlightControllerState::vps_altitude() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vps_altitude)
+  return _internal_vps_altitude();
+}
+inline void FlightControllerState::_internal_set_vps_altitude(float value) {
+  
+  _impl_.vps_altitude_ = value;
+}
+inline void FlightControllerState::set_vps_altitude(float value) {
+  _internal_set_vps_altitude(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vps_altitude)
 }
 
 // .DJIFRProto.Standard.FlightMode flightMode = 6;

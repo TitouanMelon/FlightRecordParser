@@ -269,6 +269,7 @@ static FlightControllerState ConvertToFlightControllerState(DJIFR::standardizati
         (*flightControllerState.mutable_aircraftlocation()) = ConvertToLocationCoordinate(flightController_cpp->aircraftLocation());
     }
     flightControllerState.set_altitude(flightController_cpp->altitude());
+    flightControllerState.set_vps_altitude(flightController_cpp->vps_altitude());
     flightControllerState.set_flightmode((FlightMode)flightController_cpp->flightMode());
     flightControllerState.set_gpssignallevel((GPSSignal_Level)flightController_cpp->gpsLevel());
     flightControllerState.set_satellitecount(flightController_cpp->satelliteCount());

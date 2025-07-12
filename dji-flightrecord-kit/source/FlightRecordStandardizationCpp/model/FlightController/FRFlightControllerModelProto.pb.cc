@@ -128,6 +128,7 @@ PROTOBUF_CONSTEXPR FlightControllerState::FlightControllerState(
   , /*decltype(_impl_.velocity_)*/nullptr
   , /*decltype(_impl_.takeofflocationaltitude_)*/0
   , /*decltype(_impl_.altitude_)*/0
+  , /*decltype(_impl_.vps_altitude_)*/0
   , /*decltype(_impl_.flightmode_)*/0
   , /*decltype(_impl_.gpssignallevel_)*/0
   , /*decltype(_impl_.satellitecount_)*/0
@@ -234,6 +235,7 @@ const uint32_t TableStruct_FlightController_2fFRFlightControllerModelProto_2epro
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.takeofflocationaltitude_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.aircraftlocation_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.altitude_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.vps_altitude_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flightmode_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.gpssignallevel_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.satellitecount_),
@@ -944,6 +946,7 @@ void VirtualStickFlightControlData::Clear() {
 
 const char* VirtualStickFlightControlData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  printf("Start parse from reccord-kit>source>FlighReccordStandarCpp>model>FlightController");
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -1350,6 +1353,7 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     , decltype(_impl_.velocity_){nullptr}
     , decltype(_impl_.takeofflocationaltitude_){}
     , decltype(_impl_.altitude_){}
+    , decltype(_impl_.vps_altitude_){}
     , decltype(_impl_.flightmode_){}
     , decltype(_impl_.gpssignallevel_){}
     , decltype(_impl_.satellitecount_){}
@@ -1408,6 +1412,7 @@ inline void FlightControllerState::SharedCtor(
     , decltype(_impl_.velocity_){nullptr}
     , decltype(_impl_.takeofflocationaltitude_){0}
     , decltype(_impl_.altitude_){0}
+    , decltype(_impl_.vps_altitude_){0}
     , decltype(_impl_.flightmode_){0}
     , decltype(_impl_.gpssignallevel_){0}
     , decltype(_impl_.satellitecount_){0}
@@ -1490,9 +1495,14 @@ void FlightControllerState::Clear() {
 
 const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  printf("Start parse");
+  fprintf(stdout, "Start parse");
+
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
+    fprintf(stdout, "Handle Tag : <%u>", tag);
+    printf("Handle tag : <%u>", tag);
     switch (tag >> 3) {
       // .DJIFRProto.Standard.Attitude attitude = 1;
       case 1:
@@ -1534,8 +1544,17 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // .DJIFRProto.Standard.FlightMode flightMode = 6;
       case 6:
+        printf("Tag : <%u>, cast : <%u>", tag, static_cast<uint8_t>(tag));
+        fprintf(stdout, "Tag : <%u>, cast : <%u>", tag, static_cast<uint8_t>(tag));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _impl_.vps_altitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // .DJIFRProto.Standard.FlightMode flightMode = 6;
+      case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1544,7 +1563,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.GPSSignal.Level GPSSignalLevel = 7;
-      case 7:
+      case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1553,7 +1572,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 satelliteCount = 8;
-      case 8:
+      case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _impl_.satellitecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1561,7 +1580,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 remainingFlightTime = 9;
-      case 9:
+      case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _impl_.remainingflighttime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1569,7 +1588,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 batteryPercentageNeededToLandFromCurrentHeight = 10;
-      case 10:
+      case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _impl_.batterypercentageneededtolandfromcurrentheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1577,7 +1596,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 batteryPercentageNeededToGoHome = 11;
-      case 11:
+      case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           _impl_.batterypercentageneededtogohome_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1585,7 +1604,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.SmartRTH.State smartRTHState = 12;
-      case 12:
+      case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1594,7 +1613,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.Connection.FailSafeBehavior behavior = 13;
-      case 13:
+      case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1603,7 +1622,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.VirtualStickFlightControlData virtualControlData = 14;
-      case 14:
+      case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_virtualcontroldata(), ptr);
           CHK_(ptr);
@@ -1611,7 +1630,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool isFailsafeEnabled = 15;
-      case 15:
+      case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
           _impl_.isfailsafeenabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1619,7 +1638,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool areMotorsOn = 16;
-      case 16:
+      case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
           _impl_.aremotorson_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1627,7 +1646,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool isHomeLocationSet = 17;
-      case 17:
+      case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
           _impl_.ishomelocationset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1635,7 +1654,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool isLandingConfirmationNeeded = 18;
-      case 18:
+      case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
           _impl_.islandingconfirmationneeded_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1643,7 +1662,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool hasReachedMaxFlightHeight = 19;
-      case 19:
+      case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
           _impl_.hasreachedmaxflightheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1651,7 +1670,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool hasReachedMaxFlightRadius = 20;
-      case 20:
+      case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
           _impl_.hasreachedmaxflightradius_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1659,7 +1678,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.FlightWind.Warning windWarning = 21;
-      case 21:
+      case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1668,7 +1687,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 countOfFlights = 22;
-      case 22:
+      case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
           _impl_.countofflights_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1676,7 +1695,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 flightLogIndex = 23;
-      case 23:
+      case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 184)) {
           _impl_.flightlogindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1684,7 +1703,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool isFlying = 24;
-      case 24:
+      case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 192)) {
           _impl_.isflying_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1692,7 +1711,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // int32 smartRTHCountdown = 25;
-      case 25:
+      case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 200)) {
           _impl_.smartrthcountdown_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -1700,7 +1719,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // .DJIFRProto.Standard.Velocity velocity = 26;
-      case 26:
+      case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           ptr = ctx->ParseMessage(_internal_mutable_velocity(), ptr);
           CHK_(ptr);
@@ -1708,7 +1727,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // bool isGPSBeingUsed = 27;
-      case 27:
+      case 28:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 216)) {
           _impl_.isgpsbeingused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -1716,7 +1735,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // double flightTimeInSeconds = 28;
-      case 28:
+      case 29:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 225)) {
           _impl_.flighttimeinseconds_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
@@ -1724,7 +1743,7 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
           goto handle_unusual;
         continue;
       // double cumulativeFlightDistance = 29;
-      case 29:
+      case 30:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 233)) {
           _impl_.cumulativeflightdistance_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
@@ -1799,6 +1818,15 @@ uint8_t* FlightControllerState::_InternalSerialize(
   if (raw_altitude != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_altitude(), target);
+  }
+
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_vps_altitude(), target);
   }
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2029,6 +2057,14 @@ size_t FlightControllerState::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    total_size += 1 + 4;
+  }
+
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
   if (this->_internal_flightmode() != 0) {
     total_size += 1 +
@@ -2209,6 +2245,13 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
   if (raw_altitude != 0) {
     _this->_internal_set_altitude(from._internal_altitude());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = from._internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    _this->_internal_set_vps_altitude(from._internal_vps_altitude());
   }
   if (from._internal_flightmode() != 0) {
     _this->_internal_set_flightmode(from._internal_flightmode());

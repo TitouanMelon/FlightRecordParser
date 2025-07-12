@@ -10,6 +10,9 @@ WORKDIR /parse_flyrecord
 
 COPY . .
 
+WORKDIR /parse_flyrecord/dji-flightrecord-kit/build/Ubuntu/FlightRecordStandardizationCpp
+RUN sh generate.sh
+
 WORKDIR /parse_flyrecord/dji-flightrecord-kit/build/Ubuntu/FRSample
 RUN sh generate.sh
 
