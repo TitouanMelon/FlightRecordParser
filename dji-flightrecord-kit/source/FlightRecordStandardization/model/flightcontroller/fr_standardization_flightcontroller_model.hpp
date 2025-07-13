@@ -122,6 +122,10 @@ namespace DJIFR {
             /// the barometer, in meters.
             float altitude() const override;
             void set_altitude(float altitude);
+
+            /// altitude from sensor
+            float vps_altitude() const override;
+            void set_vps_altitude(float vps_altitude);
             
             /// Flight controller flight mode.
             FlightMode flightMode() const override;
@@ -245,6 +249,8 @@ namespace DJIFR {
             LocationCoordinate2DSharedPtr aircraftLocation_;
             
             float altitude_;
+
+            float vps_altitude_;
             
             FlightMode flightMode_;
             

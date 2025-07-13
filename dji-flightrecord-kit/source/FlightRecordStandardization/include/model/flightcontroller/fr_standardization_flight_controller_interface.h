@@ -272,6 +272,9 @@ namespace DJIFR {
             /// Relative altitude of the aircraft relative to take off location, measured by
             /// the barometer, in meters.
             virtual float altitude() const = 0;
+
+            /// Altitude from sensor
+            virtual float vps_altitude() const = 0;
             
             /// Flight controller flight mode.
             virtual FlightMode flightMode() const = 0;

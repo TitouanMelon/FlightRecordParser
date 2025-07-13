@@ -1762,6 +1762,7 @@ class FlightControllerState final :
     kSmartRTHCountdownFieldNumber = 25,
     kFlightTimeInSecondsFieldNumber = 28,
     kCumulativeFlightDistanceFieldNumber = 29,
+    kVpsAltitudeFieldNumber = 30
   };
   // .DJIFRProto.Standard.Attitude attitude = 1;
   bool has_attitude() const;
@@ -1869,6 +1870,15 @@ class FlightControllerState final :
   private:
   float _internal_altitude() const;
   void _internal_set_altitude(float value);
+  public:
+
+  // float vps_altitude = 30;
+  void clear_vps_altitude();
+  float vps_altitude() const;
+  void set_vps_altitude(float value);
+  private:
+  float _internal_vps_altitude() const;
+  void _internal_set_vps_altitude(float value);
   public:
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2106,6 +2116,7 @@ class FlightControllerState final :
     int32_t smartrthcountdown_;
     double flighttimeinseconds_;
     double cumulativeflightdistance_;
+    float vps_altitude_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2607,6 +2618,26 @@ inline void FlightControllerState::_internal_set_altitude(float value) {
 inline void FlightControllerState::set_altitude(float value) {
   _internal_set_altitude(value);
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.altitude)
+}
+
+// float vps_altitude = 30;
+inline void FlightControllerState::clear_vps_altitude() {
+  _impl_.vps_altitude_ = 0;
+}
+inline float FlightControllerState::_internal_vps_altitude() const {
+  return _impl_.vps_altitude_;
+}
+inline float FlightControllerState::vps_altitude() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vps_altitude)
+  return _internal_vps_altitude();
+}
+inline void FlightControllerState::_internal_set_vps_altitude(float value) {
+  
+  _impl_.vps_altitude_ = value;
+}
+inline void FlightControllerState::set_vps_altitude(float value) {
+  _internal_set_vps_altitude(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vps_altitude)
 }
 
 // .DJIFRProto.Standard.FlightMode flightMode = 6;

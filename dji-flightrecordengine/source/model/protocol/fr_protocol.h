@@ -272,7 +272,7 @@ typedef struct
     uint8_t hOFRFXHicubKMlDx          :1;
     uint8_t ZWTfUyiWnoIXzHvU           :1;
     uint8_t EfrqbiuncIQowIcw;
-    uint8_t QXBTzpVpVljFKBAc;
+    uint8_t QXBTzpVpVljFKBAc; //vps_height
     uint16_t lastFlightTime;
     
     uint8_t startUpTimes;

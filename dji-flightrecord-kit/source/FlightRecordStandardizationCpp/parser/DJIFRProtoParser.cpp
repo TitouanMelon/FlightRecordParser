@@ -294,6 +294,7 @@ static FlightControllerState ConvertToFlightControllerState(DJIFR::standardizati
     flightControllerState.set_isgpsbeingused(flightController_cpp->isGPSBeingUsed());
     flightControllerState.set_flighttimeinseconds(flightController_cpp->flightTimeInSeconds());
     flightControllerState.set_cumulativeflightdistance(flightController_cpp->cumulativeFlightDistance());
+    flightControllerState.set_vps_altitude(flightController_cpp->vps_altitude());
     
     return flightControllerState;
 }

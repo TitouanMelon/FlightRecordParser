@@ -150,6 +150,7 @@ PROTOBUF_CONSTEXPR FlightControllerState::FlightControllerState(
   , /*decltype(_impl_.smartrthcountdown_)*/0
   , /*decltype(_impl_.flighttimeinseconds_)*/0
   , /*decltype(_impl_.cumulativeflightdistance_)*/0
+  , /*decltype(_impl_.vps_altitude_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FlightControllerStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FlightControllerStateDefaultTypeInternal()
@@ -258,6 +259,7 @@ const uint32_t TableStruct_FlightController_2fFRFlightControllerModelProto_2epro
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isgpsbeingused_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flighttimeinseconds_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.cumulativeflightdistance_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.vps_altitude_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::DJIFRProto::Standard::FlightWind)},
@@ -353,7 +355,7 @@ const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelP
   "ice\020 \022\022\n\016ConfirmLanding\020!\022\021\n\rTerrainFoll"
   "ow\020#\022\n\n\006Tripod\020&\022\030\n\024ActiveTrackSpotlight"
   "\020\'\022\025\n\021MotorsJustStarted\020)\022\014\n\007Unknown\020\377\001B"
-  "\r\242\002\nDJIFRProtob\006proto3"
+  "\r\242\002\nDJIFRProtob\006proto3 \010vps_altitude\030\030"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps[1] = {
   &::descriptor_table_Common_2fFRCommonModelProto_2eproto,
@@ -1372,6 +1374,7 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     , decltype(_impl_.smartrthcountdown_){}
     , decltype(_impl_.flighttimeinseconds_){}
     , decltype(_impl_.cumulativeflightdistance_){}
+    , decltype(_impl_.vps_altitude_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1430,6 +1433,7 @@ inline void FlightControllerState::SharedCtor(
     , decltype(_impl_.smartrthcountdown_){0}
     , decltype(_impl_.flighttimeinseconds_){0}
     , decltype(_impl_.cumulativeflightdistance_){0}
+    , decltype(_impl_.vps_altitude_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1731,6 +1735,14 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
+      // float vps_altitude = 30;
+      case 30:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _impl_.vps_altitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -1960,6 +1972,16 @@ uint8_t* FlightControllerState::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(29, this->_internal_cumulativeflightdistance(), target);
   }
 
+  // float vps_altitude = 30;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(30, this->_internal_vps_altitude(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2158,6 +2180,15 @@ size_t FlightControllerState::ByteSizeLong() const {
     total_size += 2 + 8;
   }
 
+  // float vps_altitude = 30;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = this->_internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    total_size += 1 + 4;
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -2209,6 +2240,13 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
   if (raw_altitude != 0) {
     _this->_internal_set_altitude(from._internal_altitude());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vps_altitude = from._internal_vps_altitude();
+  uint32_t raw_vps_altitude;
+  memcpy(&raw_vps_altitude, &tmp_vps_altitude, sizeof(tmp_vps_altitude));
+  if (raw_vps_altitude != 0) {
+    _this->_internal_set_vps_altitude(from._internal_vps_altitude());
   }
   if (from._internal_flightmode() != 0) {
     _this->_internal_set_flightmode(from._internal_flightmode());
