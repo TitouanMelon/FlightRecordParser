@@ -285,6 +285,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::DJIFRProto::Standard::_FlightControllerState_default_instance_._instance,
 };
 
+//Not use in json ??
 const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n3FlightController/FRFlightControllerMod"
   "elProto.proto\022\023DJIFRProto.Standard\032\037Comm"
