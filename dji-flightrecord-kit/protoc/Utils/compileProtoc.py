@@ -27,35 +27,37 @@ def parseFileTypeFromFileName(fileName):
 
 def compileObjectiveC(protocFilePath, outputPath):
     if os.path.exists(protocFilePath) == False:
-        print "file not exist: " + protocFilePath
+        print("file not exist: " + protocFilePath)
         return
 
     fileType = parseFileTypeFromeFilePath(protocFilePath)
 
     if fileType != "proto" and fileType != "protoc":
-        print "file type not support: " + protocFilePath
+        print("file type not support: " + protocFilePath)
         return
 
     fileFolder = os.path.dirname(protocFilePath);
     fileParentFolder = os.path.dirname(fileFolder)
     resultStr = os.popen("protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --objc_out=" + outputPath).read()
-    print resultStr
+    print(resultStr)
+
 
 def compileCpp(protocFilePath, outputPath):
     if os.path.exists(protocFilePath) == False:
-        print "file not exist: " + protocFilePath
+        print("file not exist: " + protocFilePath)
         return
 
     fileType = parseFileTypeFromeFilePath(protocFilePath)
 
     if fileType != "proto" and fileType != "protoc":
-        print "file type not support: " + protocFilePath
+        print("file type not support: " + protocFilePath)
         return
 
     fileFolder = os.path.dirname(protocFilePath);
     fileParentFolder = os.path.dirname(fileFolder)
     resultStr = os.popen("protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --cpp_out=" + outputPath).read()
-    print resultStr
+    print(resultStr)
+
 
 ################################### Main ###############################
 
