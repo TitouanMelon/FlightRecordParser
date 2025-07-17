@@ -306,4 +306,5 @@ message FlightControllerState {
     double flightTimeInSeconds = 28;    
     /// Cumulative flight distance of the aircraft in meters
     double cumulativeFlightDistance = 29;
+    float vpsHeight = 30;
 }
