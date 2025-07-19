@@ -99,7 +99,7 @@ homeLocationCoordinate_(nullptr),
 takeoffLocationAltitude_(0),
 aircraftLocation_(nullptr),
 altitude_(0),
-vps_altitude_(0),
+vpsHeight_(0),
 flightMode_(FlightMode::Unknown),
 gpsLevel_(GPSSignalLevel::Unknwon),
 satelliteCount_(0),
@@ -181,12 +181,12 @@ void FlightControllerStateImp::set_altitude(float altitude) {
     altitude_ = altitude;
 }
 
-float FlightControllerStateImp::vps_altitude() const {
-    return vps_altitude_;
+float FlightControllerStateImp::vpsHeight() const {
+    return vpsHeight_;
 }
 
-void FlightControllerStateImp::set_vps_altitude(float vps_altitude) {
-    vps_altitude_ = vps_altitude;
+void FlightControllerStateImp::set_vpsHeight(float vpsHeight) {
+    vpsHeight_ = vpsHeight;
 }
 
 FlightMode FlightControllerStateImp::flightMode() const {

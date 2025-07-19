@@ -274,7 +274,7 @@ namespace DJIFR {
             virtual float altitude() const = 0;
 
             /// Altitude from sensor
-            virtual float vps_altitude() const = 0;
+            virtual float vpsHeight() const = 0;
             
             /// Flight controller flight mode.
             virtual FlightMode flightMode() const = 0;

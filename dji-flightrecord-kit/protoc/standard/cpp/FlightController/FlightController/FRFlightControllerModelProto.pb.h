@@ -1872,13 +1872,13 @@ class FlightControllerState final :
   void _internal_set_altitude(float value);
   public:
 
-  // float vps_altitude = 30;
-  void clear_vps_altitude();
-  float vps_altitude() const;
-  void set_vps_altitude(float value);
+  // float vpsHeight = 30;
+  void clear_vpsHeight();
+  float vpsHeight() const;
+  void set_vpsHeight(float value);
   private:
-  float _internal_vps_altitude() const;
-  void _internal_set_vps_altitude(float value);
+  float _internal_vpsHeight() const;
+  void _internal_set_vpsHeight(float value);
   public:
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2116,7 +2116,7 @@ class FlightControllerState final :
     int32_t smartrthcountdown_;
     double flighttimeinseconds_;
     double cumulativeflightdistance_;
-    float vps_altitude_;
+    float vpsHeight_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2620,24 +2620,24 @@ inline void FlightControllerState::set_altitude(float value) {
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.altitude)
 }
 
-// float vps_altitude = 30;
-inline void FlightControllerState::clear_vps_altitude() {
-  _impl_.vps_altitude_ = 0;
+// float vpsHeight = 30;
+inline void FlightControllerState::clear_vpsHeight() {
+  _impl_.vpsHeight_ = 0;
 }
-inline float FlightControllerState::_internal_vps_altitude() const {
-  return _impl_.vps_altitude_;
+inline float FlightControllerState::_internal_vpsHeight() const {
+  return _impl_.vpsHeight_;
 }
-inline float FlightControllerState::vps_altitude() const {
-  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vps_altitude)
-  return _internal_vps_altitude();
+inline float FlightControllerState::vpsHeight() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vpsHeight)
+  return _internal_vpsHeight();
 }
-inline void FlightControllerState::_internal_set_vps_altitude(float value) {
+inline void FlightControllerState::_internal_set_vpsHeight(float value) {
   
-  _impl_.vps_altitude_ = value;
+  _impl_.vpsHeight_ = value;
 }
-inline void FlightControllerState::set_vps_altitude(float value) {
-  _internal_set_vps_altitude(value);
-  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vps_altitude)
+inline void FlightControllerState::set_vpsHeight(float value) {
+  _internal_set_vpsHeight(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vpsHeight)
 }
 
 // .DJIFRProto.Standard.FlightMode flightMode = 6;

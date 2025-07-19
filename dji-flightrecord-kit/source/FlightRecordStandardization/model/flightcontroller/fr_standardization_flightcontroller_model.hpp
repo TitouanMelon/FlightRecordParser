@@ -124,8 +124,8 @@ namespace DJIFR {
             void set_altitude(float altitude);
 
             /// altitude from sensor
-            float vps_altitude() const override;
-            void set_vps_altitude(float vps_altitude);
+            float vpsHeight() const override;
+            void set_vpsHeight(float vpsHeight);
             
             /// Flight controller flight mode.
             FlightMode flightMode() const override;
@@ -250,7 +250,7 @@ namespace DJIFR {
             
             float altitude_;
 
-            float vps_altitude_;
+            float vpsHeight_;
             
             FlightMode flightMode_;
             
