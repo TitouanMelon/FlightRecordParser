@@ -228,66 +228,70 @@ typedef struct
     
     int16_t yaw;
     
-    uint8_t control_mode :7;
-    
-    uint8_t rc_outcontrol:1;
-    uint8_t FcLIaBnHGrIdCPae;
-    uint8_t alXJEnnqKohpOrIv      :1;
-    
+    uint8_t control_mode :7; // flyRcState
+    uint8_t rc_outcontrol:1; // RcState
+
+    uint8_t FcLIaBnHGrIdCPae; // flycCommand
+
+    uint8_t alXJEnnqKohpOrIv      :1; // canIOCWork    
     uint8_t groundOrSky     :2;
-    
     uint8_t isMotorUp       :1;
-    uint8_t FyPwzqNxTELNHBFq:1;
-    uint8_t BDnRRfEKLIFHPbYk     :3;
-    uint8_t owwcYsTwwGyawhTh      :1;
-    
+    uint8_t FyPwzqNxTELNHBFq:1; //isSwaveWork
+    uint8_t BDnRRfEKLIFHPbYk     :3; //GoHomeStatus
+
+    uint8_t owwcYsTwwGyawhTh      :1; // isVisionUsed
     uint8_t batteryWarning    :2;
-    uint8_t PPqGKRDqqvfWaPEN:1;
-    uint8_t NTWSdyzVyGjeZytv :1;
-    uint8_t vxLdBoDOQIKNvesn       :2;
-    
+    uint8_t PPqGKRDqqvfWaPEN:1; // Unknown
+    uint8_t NTWSdyzVyGjeZytv :1; // isImuPreheated
+    uint8_t vxLdBoDOQIKNvesn       :2; //modeChannel
     uint8_t isGPSValid        :1;
     
     uint8_t isCompassError :1;
-    uint8_t HJFuZjYdhVqQYybR:1;
-    
+    uint8_t HJFuZjYdhVqQYybR:1; //waveError
     uint8_t gpsSignalLevel :4;
-    uint8_t BeqludSZijuZuhVJ    :2;
-    uint8_t FuMAiwCgVLJzMQki          :1;
-    uint8_t MDFMUARFxhpdJtmI       :1;
-    uint8_t lRLOYosJLeInQfmo    :1;
-    uint8_t dbBvkdKrlcmvZarp          :1;
-    uint8_t sHDpcOoUTOCyuKeV        :1;
-    uint8_t mOEVFFHhLfbwkMYj        :1;
-    uint8_t zLsFXPLyQrHXFFUf:1;
-    uint8_t SBVtcuthJBEgAhpq  :1;
+    uint8_t BeqludSZijuZuhVJ    :2; // batteryType
+
+    uint8_t FuMAiwCgVLJzMQki          :1; // isOutOfLimit
+    uint8_t MDFMUARFxhpdJtmI       :1; // isGoHomeHeightModified
+    uint8_t lRLOYosJLeInQfmo    :1; // isPropellerCatapult
+    uint8_t dbBvkdKrlcmvZarp          :1; // isMotorBlocked
+    uint8_t sHDpcOoUTOCyuKeV        :1; // isNotEnoughForce
+    uint8_t mOEVFFHhLfbwkMYj        :1; // isBarometerDeadInAir
+    uint8_t zLsFXPLyQrHXFFUf:1; // isVibrating
+    uint8_t SBVtcuthJBEgAhpq  :1; // isAcceletorOverRange
     
     uint8_t gps_num;
-    uint8_t kRkpOaMocJqXhYiC;
-    uint8_t wJpEViPlInceBxUJ:7;
-    uint8_t sfLKJziSEyBkGWYo:1;
-    uint8_t NDZtBUirCTogtANe              :4;
-    uint8_t aklFKRILmiQEdRGR:1;
-    uint8_t GDxNbhaHjMNkkVZj         :1;
-    uint8_t hOFRFXHicubKMlDx          :1;
-    uint8_t ZWTfUyiWnoIXzHvU           :1;
-    uint8_t EfrqbiuncIQowIcw;
-    uint8_t QXBTzpVpVljFKBAc; //vps_height
-    uint16_t lastFlightTime;
+
+    uint8_t kRkpOaMocJqXhYiC; // flighAction
+
+    uint8_t wJpEViPlInceBxUJ:7; // motorStartFailedCause
+    uint8_t sfLKJziSEyBkGWYo:1; // ??
+
+    uint8_t NDZtBUirCTogtANe              :4; //nonGpsCause
+    uint8_t aklFKRILmiQEdRGR:1; // waypointLimitMode
+    uint8_t GDxNbhaHjMNkkVZj         :1; // ??
+    uint8_t hOFRFXHicubKMlDx          :1; // ??
+    uint8_t ZWTfUyiWnoIXzHvU           :1; // ??
+
+    uint8_t EfrqbiuncIQowIcw; // battery
+    uint8_t QXBTzpVpVljFKBAc; // sWaveHeight
+    uint16_t lastFlightTime; // flyTime
     
-    uint8_t startUpTimes;
-    uint8_t itVJTUmVhBSRyFyP   :7;
-    uint8_t qDnfgctEHRqWvwNB:1;
-    uint8_t YeiIzOEFVCzhMWuf  :7;
-    uint8_t mbPYYKtaKTRiSNrF:1;
+    uint8_t startUpTimes; // motorRevolution
+
+    uint8_t itVJTUmVhBSRyFyP   :7; // ??
+    uint8_t qDnfgctEHRqWvwNB:1; // ??
+    
+    uint8_t YeiIzOEFVCzhMWuf  :7; // ??
+    uint8_t mbPYYKtaKTRiSNrF:1; // ??
     
     uint8_t versionC;
     
     uint8_t droneType;
-    uint8_t sXVeYVkmfPPqVmfH;
-    uint8_t apvMQrDukxndFPXS;
-    uint8_t nXvqtfHDnlzNwKsq;
-    uint8_t ZCmCGCIrRKmoBDwU;
+    uint8_t sXVeYVkmfPPqVmfH; // ImuInitFailReason
+    uint8_t apvMQrDukxndFPXS; // Unknown
+    uint8_t nXvqtfHDnlzNwKsq; // ctrlDevice
+    uint8_t ZCmCGCIrRKmoBDwU; //Unknown
 } dji_fc_osd_push;
 
 typedef struct
