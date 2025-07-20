@@ -38,7 +38,7 @@ def compileObjectiveC(protocFilePath, outputPath):
 
     fileFolder = os.path.dirname(protocFilePath);
     fileParentFolder = os.path.dirname(fileFolder)
-    resultStr = os.popen("C:/Users/Titouan/workspace/protoc-31.1/bin/protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --objc_out=" + outputPath).read()
+    resultStr = os.popen("C:/Users/t_melon/Downloads/bin/protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --objc_out=" + outputPath).read()
     print(resultStr)
 
 
@@ -55,7 +55,7 @@ def compileCpp(protocFilePath, outputPath):
 
     fileFolder = os.path.dirname(protocFilePath);
     fileParentFolder = os.path.dirname(fileFolder)
-    resultStr = os.popen("C:/Users/Titouan/workspace/protoc-31.1/bin/protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --cpp_out=" + outputPath).read()
+    resultStr = os.popen("C:/Users/t_melon/Downloads/bin/protoc " + protocFilePath + " --proto_path=" + fileParentFolder + " --cpp_out=" + outputPath).read()
     print(resultStr)
 
 

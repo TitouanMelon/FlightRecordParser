@@ -1762,7 +1762,7 @@ class FlightControllerState final :
     kSmartRTHCountdownFieldNumber = 25,
     kFlightTimeInSecondsFieldNumber = 28,
     kCumulativeFlightDistanceFieldNumber = 29,
-    kVpsAltitudeFieldNumber = 30
+    kVpsHeightFieldNumber = 30,
   };
   // .DJIFRProto.Standard.Attitude attitude = 1;
   bool has_attitude() const;
@@ -1870,15 +1870,6 @@ class FlightControllerState final :
   private:
   float _internal_altitude() const;
   void _internal_set_altitude(float value);
-  public:
-
-  // float vpsHeight = 30;
-  void clear_vpsHeight();
-  float vpsHeight() const;
-  void set_vpsHeight(float value);
-  private:
-  float _internal_vpsHeight() const;
-  void _internal_set_vpsHeight(float value);
   public:
 
   // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -2079,6 +2070,15 @@ class FlightControllerState final :
   void _internal_set_cumulativeflightdistance(double value);
   public:
 
+  // float vpsHeight = 30;
+  void clear_vpsheight();
+  float vpsheight() const;
+  void set_vpsheight(float value);
+  private:
+  float _internal_vpsheight() const;
+  void _internal_set_vpsheight(float value);
+  public:
+
   // @@protoc_insertion_point(class_scope:DJIFRProto.Standard.FlightControllerState)
  private:
   class _Internal;
@@ -2116,7 +2116,7 @@ class FlightControllerState final :
     int32_t smartrthcountdown_;
     double flighttimeinseconds_;
     double cumulativeflightdistance_;
-    float vpsHeight_;
+    float vpsheight_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2618,26 +2618,6 @@ inline void FlightControllerState::_internal_set_altitude(float value) {
 inline void FlightControllerState::set_altitude(float value) {
   _internal_set_altitude(value);
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.altitude)
-}
-
-// float vpsHeight = 30;
-inline void FlightControllerState::clear_vpsHeight() {
-  _impl_.vpsHeight_ = 0;
-}
-inline float FlightControllerState::_internal_vpsHeight() const {
-  return _impl_.vpsHeight_;
-}
-inline float FlightControllerState::vpsHeight() const {
-  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vpsHeight)
-  return _internal_vpsHeight();
-}
-inline void FlightControllerState::_internal_set_vpsHeight(float value) {
-  
-  _impl_.vpsHeight_ = value;
-}
-inline void FlightControllerState::set_vpsHeight(float value) {
-  _internal_set_vpsHeight(value);
-  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vpsHeight)
 }
 
 // .DJIFRProto.Standard.FlightMode flightMode = 6;
@@ -3253,6 +3233,26 @@ inline void FlightControllerState::_internal_set_cumulativeflightdistance(double
 inline void FlightControllerState::set_cumulativeflightdistance(double value) {
   _internal_set_cumulativeflightdistance(value);
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.cumulativeFlightDistance)
+}
+
+// float vpsHeight = 30;
+inline void FlightControllerState::clear_vpsheight() {
+  _impl_.vpsheight_ = 0;
+}
+inline float FlightControllerState::_internal_vpsheight() const {
+  return _impl_.vpsheight_;
+}
+inline float FlightControllerState::vpsheight() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.vpsHeight)
+  return _internal_vpsheight();
+}
+inline void FlightControllerState::_internal_set_vpsheight(float value) {
+  
+  _impl_.vpsheight_ = value;
+}
+inline void FlightControllerState::set_vpsheight(float value) {
+  _internal_set_vpsheight(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vpsHeight)
 }
 
 #ifdef __GNUC__

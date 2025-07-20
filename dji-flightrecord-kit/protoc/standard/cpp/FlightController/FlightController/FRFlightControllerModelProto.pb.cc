@@ -150,7 +150,7 @@ PROTOBUF_CONSTEXPR FlightControllerState::FlightControllerState(
   , /*decltype(_impl_.smartrthcountdown_)*/0
   , /*decltype(_impl_.flighttimeinseconds_)*/0
   , /*decltype(_impl_.cumulativeflightdistance_)*/0
-  , /*decltype(_impl_.vpsHeight_)*/0
+  , /*decltype(_impl_.vpsheight_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FlightControllerStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FlightControllerStateDefaultTypeInternal()
@@ -259,7 +259,7 @@ const uint32_t TableStruct_FlightController_2fFRFlightControllerModelProto_2epro
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isgpsbeingused_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flighttimeinseconds_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.cumulativeflightdistance_),
-  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.vpsHeight_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.vpsheight_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::DJIFRProto::Standard::FlightWind)},
@@ -285,79 +285,78 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::DJIFRProto::Standard::_FlightControllerState_default_instance_._instance,
 };
 
-//Not use in json ??
 const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n3FlightController/FRFlightControllerMod"
-    "elProto.proto\022\023DJIFRProto.Standard\032\037Comm"
-    "on/FRCommonModelProto.proto\"H\n\nFlightWin"
-    "d\":\n\007Warning\022\n\n\006Level0\020\000\022\n\n\006Level1\020\001\022\n\n\006"
-    "Level2\020\002\022\013\n\007Unknown\020\003\"Q\n\nConnection\"C\n\020F"
-    "ailSafeBehavior\022\t\n\005Hover\020\000\022\013\n\007Landing\020\001\022"
-    "\n\n\006GoHome\020\002\022\013\n\007Unknown\020\003\"Y\n\010SmartRTH\"M\n\005"
-    "State\022\010\n\004Idle\020\000\022\020\n\014CountingDown\020\001\022\014\n\010Exe"
-    "cuted\020\002\022\r\n\tCancelled\020\003\022\013\n\007Unknown\020\004\"N\n\033V"
-    "irtualStickVerticalControl\"/\n\004Mode\022\014\n\010Ve"
-    "locity\020\000\022\014\n\010Position\020\001\022\013\n\007Unknown\020\002\"L\n\034V"
-    "irtualStickRollPitchControl\",\n\004Mode\022\t\n\005A"
-    "ngle\020\000\022\014\n\010Velocity\020\001\022\013\n\007Unknown\020\002\"F\n\026Vir"
-    "tualStickYawControl\",\n\004Mode\022\t\n\005Angle\020\000\022\014"
-    "\n\010Velocity\020\001\022\013\n\007Unknown\020\002\"K\n\034VirtualStic"
-    "kFlightCoordinate\"+\n\006System\022\n\n\006Ground\020\000\022"
-    "\010\n\004Body\020\001\022\013\n\007Unknown\020\002\"\264\003\n\035VirtualStickF"
-    "lightControlData\022\r\n\005pitch\030\001 \001(\002\022\014\n\004roll\030"
-    "\002 \001(\002\022\013\n\003yaw\030\003 \001(\002\022\030\n\020verticalThrottle\030\004"
-    " \001(\002\022R\n\023verticalControlMode\030\005 \001(\01625.DJIF"
-    "RProto.Standard.VirtualStickVerticalCont"
-    "rol.Mode\022T\n\024rollPitchControlMode\030\006 \001(\01626"
-    ".DJIFRProto.Standard.VirtualStickRollPit"
-    "chControl.Mode\022H\n\016yawControlMode\030\007 \001(\01620"
-    ".DJIFRProto.Standard.VirtualStickYawCont"
-    "rol.Mode\022[\n\031rollPitchCoordinateSystem\030\010 "
-    "\001(\01628.DJIFRProto.Standard.VirtualStickFl"
-    "ightCoordinate.System\"\320\t\n\025FlightControll"
-    "erState\022/\n\010attitude\030\001 \001(\0132\035.DJIFRProto.S"
-    "tandard.Attitude\022I\n\026homeLocationCoordina"
-    "te\030\002 \001(\0132).DJIFRProto.Standard.LocationC"
-    "oordinate2D\022\037\n\027takeoffLocationAltitude\030\003"
-    " \001(\002\022C\n\020aircraftLocation\030\004 \001(\0132).DJIFRPr"
-    "oto.Standard.LocationCoordinate2D\022\020\n\010alt"
-    "itude\030\005 \001(\002\0223\n\nflightMode\030\006 \001(\0162\037.DJIFRP"
-    "roto.Standard.FlightMode\022<\n\016GPSSignalLev"
-    "el\030\007 \001(\0162$.DJIFRProto.Standard.GPSSignal"
-    ".Level\022\026\n\016satelliteCount\030\010 \001(\005\022\033\n\023remain"
-    "ingFlightTime\030\t \001(\005\0226\n.batteryPercentage"
-    "NeededToLandFromCurrentHeight\030\n \001(\005\022\'\n\037b"
-    "atteryPercentageNeededToGoHome\030\013 \001(\005\022:\n\r"
-    "smartRTHState\030\014 \001(\0162#.DJIFRProto.Standar"
-    "d.SmartRTH.State\022B\n\010behavior\030\r \001(\01620.DJI"
-    "FRProto.Standard.Connection.FailSafeBeha"
-    "vior\022N\n\022virtualControlData\030\016 \001(\01322.DJIFR"
-    "Proto.Standard.VirtualStickFlightControl"
-    "Data\022\031\n\021isFailsafeEnabled\030\017 \001(\010\022\023\n\013areMo"
-    "torsOn\030\020 \001(\010\022\031\n\021isHomeLocationSet\030\021 \001(\010\022"
-    "#\n\033isLandingConfirmationNeeded\030\022 \001(\010\022!\n\031"
-    "hasReachedMaxFlightHeight\030\023 \001(\010\022!\n\031hasRe"
-    "achedMaxFlightRadius\030\024 \001(\010\022<\n\013windWarnin"
-    "g\030\025 \001(\0162\'.DJIFRProto.Standard.FlightWind"
-    ".Warning\022\026\n\016countOfFlights\030\026 \001(\005\022\026\n\016flig"
-    "htLogIndex\030\027 \001(\005\022\020\n\010isFlying\030\030 \001(\010\022\031\n\021sm"
-    "artRTHCountdown\030\031 \001(\005\022/\n\010velocity\030\032 \001(\0132"
-    "\035.DJIFRProto.Standard.Velocity\022\026\n\016isGPSB"
-    "eingUsed\030\033 \001(\010\022\033\n\023flightTimeInSeconds\030\034 "
-    "\001(\001\022 \n\030cumulativeFlightDistance\030\035 \001(\001\022\021\n"
-    "\tvpsHeight\030\036 \001(\002*\267\003\n\nFlightMode\022\n\n\006Manua"
-    "l\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013\n\007GPS"
-    "Atti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHomeLock"
-    "\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTakeoff\020\n"
-    "\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022\017\n\013GP"
-    "SWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick\020\021\022\024\n"
-    "\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GPSFoll"
-    "owMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033\022\014\n\010G"
-    "PSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016ConfirmLandi"
-    "ng\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&\022\030\n\024A"
-    "ctiveTrackSpotlight\020\'\022\025\n\021MotorsJustStart"
-    "ed\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006proto"
-    "3"
+  "elProto.proto\022\023DJIFRProto.Standard\032\037Comm"
+  "on/FRCommonModelProto.proto\"H\n\nFlightWin"
+  "d\":\n\007Warning\022\n\n\006Level0\020\000\022\n\n\006Level1\020\001\022\n\n\006"
+  "Level2\020\002\022\013\n\007Unknown\020\003\"Q\n\nConnection\"C\n\020F"
+  "ailSafeBehavior\022\t\n\005Hover\020\000\022\013\n\007Landing\020\001\022"
+  "\n\n\006GoHome\020\002\022\013\n\007Unknown\020\003\"Y\n\010SmartRTH\"M\n\005"
+  "State\022\010\n\004Idle\020\000\022\020\n\014CountingDown\020\001\022\014\n\010Exe"
+  "cuted\020\002\022\r\n\tCancelled\020\003\022\013\n\007Unknown\020\004\"N\n\033V"
+  "irtualStickVerticalControl\"/\n\004Mode\022\014\n\010Ve"
+  "locity\020\000\022\014\n\010Position\020\001\022\013\n\007Unknown\020\002\"L\n\034V"
+  "irtualStickRollPitchControl\",\n\004Mode\022\t\n\005A"
+  "ngle\020\000\022\014\n\010Velocity\020\001\022\013\n\007Unknown\020\002\"F\n\026Vir"
+  "tualStickYawControl\",\n\004Mode\022\t\n\005Angle\020\000\022\014"
+  "\n\010Velocity\020\001\022\013\n\007Unknown\020\002\"K\n\034VirtualStic"
+  "kFlightCoordinate\"+\n\006System\022\n\n\006Ground\020\000\022"
+  "\010\n\004Body\020\001\022\013\n\007Unknown\020\002\"\264\003\n\035VirtualStickF"
+  "lightControlData\022\r\n\005pitch\030\001 \001(\002\022\014\n\004roll\030"
+  "\002 \001(\002\022\013\n\003yaw\030\003 \001(\002\022\030\n\020verticalThrottle\030\004"
+  " \001(\002\022R\n\023verticalControlMode\030\005 \001(\01625.DJIF"
+  "RProto.Standard.VirtualStickVerticalCont"
+  "rol.Mode\022T\n\024rollPitchControlMode\030\006 \001(\01626"
+  ".DJIFRProto.Standard.VirtualStickRollPit"
+  "chControl.Mode\022H\n\016yawControlMode\030\007 \001(\01620"
+  ".DJIFRProto.Standard.VirtualStickYawCont"
+  "rol.Mode\022[\n\031rollPitchCoordinateSystem\030\010 "
+  "\001(\01628.DJIFRProto.Standard.VirtualStickFl"
+  "ightCoordinate.System\"\320\t\n\025FlightControll"
+  "erState\022/\n\010attitude\030\001 \001(\0132\035.DJIFRProto.S"
+  "tandard.Attitude\022I\n\026homeLocationCoordina"
+  "te\030\002 \001(\0132).DJIFRProto.Standard.LocationC"
+  "oordinate2D\022\037\n\027takeoffLocationAltitude\030\003"
+  " \001(\002\022C\n\020aircraftLocation\030\004 \001(\0132).DJIFRPr"
+  "oto.Standard.LocationCoordinate2D\022\020\n\010alt"
+  "itude\030\005 \001(\002\0223\n\nflightMode\030\006 \001(\0162\037.DJIFRP"
+  "roto.Standard.FlightMode\022<\n\016GPSSignalLev"
+  "el\030\007 \001(\0162$.DJIFRProto.Standard.GPSSignal"
+  ".Level\022\026\n\016satelliteCount\030\010 \001(\005\022\033\n\023remain"
+  "ingFlightTime\030\t \001(\005\0226\n.batteryPercentage"
+  "NeededToLandFromCurrentHeight\030\n \001(\005\022\'\n\037b"
+  "atteryPercentageNeededToGoHome\030\013 \001(\005\022:\n\r"
+  "smartRTHState\030\014 \001(\0162#.DJIFRProto.Standar"
+  "d.SmartRTH.State\022B\n\010behavior\030\r \001(\01620.DJI"
+  "FRProto.Standard.Connection.FailSafeBeha"
+  "vior\022N\n\022virtualControlData\030\016 \001(\01322.DJIFR"
+  "Proto.Standard.VirtualStickFlightControl"
+  "Data\022\031\n\021isFailsafeEnabled\030\017 \001(\010\022\023\n\013areMo"
+  "torsOn\030\020 \001(\010\022\031\n\021isHomeLocationSet\030\021 \001(\010\022"
+  "#\n\033isLandingConfirmationNeeded\030\022 \001(\010\022!\n\031"
+  "hasReachedMaxFlightHeight\030\023 \001(\010\022!\n\031hasRe"
+  "achedMaxFlightRadius\030\024 \001(\010\022<\n\013windWarnin"
+  "g\030\025 \001(\0162\'.DJIFRProto.Standard.FlightWind"
+  ".Warning\022\026\n\016countOfFlights\030\026 \001(\005\022\026\n\016flig"
+  "htLogIndex\030\027 \001(\005\022\020\n\010isFlying\030\030 \001(\010\022\031\n\021sm"
+  "artRTHCountdown\030\031 \001(\005\022/\n\010velocity\030\032 \001(\0132"
+  "\035.DJIFRProto.Standard.Velocity\022\026\n\016isGPSB"
+  "eingUsed\030\033 \001(\010\022\033\n\023flightTimeInSeconds\030\034 "
+  "\001(\001\022 \n\030cumulativeFlightDistance\030\035 \001(\001\022\021\n"
+  "\tvpsHeight\030\036 \001(\002*\267\003\n\nFlightMode\022\n\n\006Manua"
+  "l\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013\n\007GPS"
+  "Atti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHomeLock"
+  "\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTakeoff\020\n"
+  "\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022\017\n\013GP"
+  "SWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick\020\021\022\024\n"
+  "\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GPSFoll"
+  "owMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033\022\014\n\010G"
+  "PSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016ConfirmLandi"
+  "ng\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&\022\030\n\024A"
+  "ctiveTrackSpotlight\020\'\022\025\n\021MotorsJustStart"
+  "ed\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006proto"
+  "3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps[1] = {
   &::descriptor_table_Common_2fFRCommonModelProto_2eproto,
@@ -1376,7 +1375,7 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     , decltype(_impl_.smartrthcountdown_){}
     , decltype(_impl_.flighttimeinseconds_){}
     , decltype(_impl_.cumulativeflightdistance_){}
-    , decltype(_impl_.vpsHeight_){}
+    , decltype(_impl_.vpsheight_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1396,8 +1395,8 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     _this->_impl_.velocity_ = new ::DJIFRProto::Standard::Velocity(*from._impl_.velocity_);
   }
   ::memcpy(&_impl_.takeofflocationaltitude_, &from._impl_.takeofflocationaltitude_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.cumulativeflightdistance_) -
-    reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.cumulativeflightdistance_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.vpsheight_) -
+    reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.vpsheight_));
   // @@protoc_insertion_point(copy_constructor:DJIFRProto.Standard.FlightControllerState)
 }
 
@@ -1435,7 +1434,7 @@ inline void FlightControllerState::SharedCtor(
     , decltype(_impl_.smartrthcountdown_){0}
     , decltype(_impl_.flighttimeinseconds_){0}
     , decltype(_impl_.cumulativeflightdistance_){0}
-    , decltype(_impl_.vpsHeight_){0}
+    , decltype(_impl_.vpsheight_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1489,8 +1488,8 @@ void FlightControllerState::Clear() {
   }
   _impl_.velocity_ = nullptr;
   ::memset(&_impl_.takeofflocationaltitude_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.cumulativeflightdistance_) -
-      reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.cumulativeflightdistance_));
+      reinterpret_cast<char*>(&_impl_.vpsheight_) -
+      reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.vpsheight_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1739,8 +1738,8 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
         continue;
       // float vpsHeight = 30;
       case 30:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
-          _impl_.vpsHeight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 245)) {
+          _impl_.vpsheight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
@@ -1976,12 +1975,12 @@ uint8_t* FlightControllerState::_InternalSerialize(
 
   // float vpsHeight = 30;
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_vpsHeight = this->_internal_vpsHeight();
-  uint32_t raw_vpsHeight;
-  memcpy(&raw_vpsHeight, &tmp_vpsHeight, sizeof(tmp_vpsHeight));
-  if (raw_vpsHeight != 0) {
+  float tmp_vpsheight = this->_internal_vpsheight();
+  uint32_t raw_vpsheight;
+  memcpy(&raw_vpsheight, &tmp_vpsheight, sizeof(tmp_vpsheight));
+  if (raw_vpsheight != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_vpsHeight(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(30, this->_internal_vpsheight(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2184,11 +2183,11 @@ size_t FlightControllerState::ByteSizeLong() const {
 
   // float vpsHeight = 30;
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_vpsHeight = this->_internal_vpsHeight();
-  uint32_t raw_vpsHeight;
-  memcpy(&raw_vpsHeight, &tmp_vpsHeight, sizeof(tmp_vpsHeight));
-  if (raw_vpsHeight != 0) {
-    total_size += 1 + 4;
+  float tmp_vpsheight = this->_internal_vpsheight();
+  uint32_t raw_vpsheight;
+  memcpy(&raw_vpsheight, &tmp_vpsheight, sizeof(tmp_vpsheight));
+  if (raw_vpsheight != 0) {
+    total_size += 2 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2242,13 +2241,6 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
   if (raw_altitude != 0) {
     _this->_internal_set_altitude(from._internal_altitude());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_vpsHeight = from._internal_vpsHeight();
-  uint32_t raw_vpsHeight;
-  memcpy(&raw_vpsHeight, &tmp_vpsHeight, sizeof(tmp_vpsHeight));
-  if (raw_vpsHeight != 0) {
-    _this->_internal_set_vpsHeight(from._internal_vpsHeight());
   }
   if (from._internal_flightmode() != 0) {
     _this->_internal_set_flightmode(from._internal_flightmode());
@@ -2324,6 +2316,13 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (raw_cumulativeflightdistance != 0) {
     _this->_internal_set_cumulativeflightdistance(from._internal_cumulativeflightdistance());
   }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_vpsheight = from._internal_vpsheight();
+  uint32_t raw_vpsheight;
+  memcpy(&raw_vpsheight, &tmp_vpsheight, sizeof(tmp_vpsheight));
+  if (raw_vpsheight != 0) {
+    _this->_internal_set_vpsheight(from._internal_vpsheight());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -2342,8 +2341,8 @@ void FlightControllerState::InternalSwap(FlightControllerState* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.cumulativeflightdistance_)
-      + sizeof(FlightControllerState::_impl_.cumulativeflightdistance_)
+      PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.vpsheight_)
+      + sizeof(FlightControllerState::_impl_.vpsheight_)
       - PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.attitude_)>(
           reinterpret_cast<char*>(&_impl_.attitude_),
           reinterpret_cast<char*>(&other->_impl_.attitude_));
