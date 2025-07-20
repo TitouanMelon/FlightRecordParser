@@ -307,4 +307,33 @@ message FlightControllerState {
     /// Cumulative flight distance of the aircraft in meters
     double cumulativeFlightDistance = 29;
     float vpsHeight = 30;
+
+    //Custom
+    int32 flyCCommand = 31;
+    int32 canIocWork = 32;
+    int32 isSwaveWork = 33;
+    int32 GoHomeStatus = 34;
+    int32 isVisionUsed = 35;
+    int32 batteryWarning = 36;
+    int32 isImuPreheated = 37;
+    int32 modeChannel = 38;
+    int32 isCompassError = 39;
+    int32 waveError = 40;
+    int32 batteryType = 41;
+    int32 isOutOfLimit = 42;
+    int32 isGoHomeHeightModified = 43;
+    int32 isPropellerCatapult = 44;
+    int32 isMotorBlocked = 45;
+    int32 isNotEnoughForce = 46;
+    int32 isBarometerDeadInAir = 47;
+    int32 isVibrating = 48;
+    int32 isAcceletorOverRange = 49;
+    int32 flighAction = 50;
+    int32 motorStartFailedCause = 51;
+    int32 nonGpsCause = 52;
+    int32 waypointLimitMode = 53;
+    int32 battery = 54;
+    int32 motorRevolution = 55;
+    int32 ImuInitFailReason = 56;
+    int32 ctrlDevice = 57;
 }

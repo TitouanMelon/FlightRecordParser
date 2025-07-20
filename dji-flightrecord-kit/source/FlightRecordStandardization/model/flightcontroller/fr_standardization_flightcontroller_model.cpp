@@ -120,7 +120,34 @@ countOfFlights_(0),
 flightLogIndex_(0),
 isFlying_(false),
 smartRTHCountdown_(0),
-drone_type_(0)
+drone_type_(0),
+flyCCommand_(0),
+canIocWork_(0),
+isSwaveWork_(0),
+GoHomeStatus_(0),
+isVisionUsed_(0),
+batteryWarning_(0),
+isImuPreheated_(0),
+modeChannel_(0),
+isCompassError_(0),
+waveError_(0),
+batteryType_(0),
+isOutOfLimit_(0),
+isGoHomeHeightModified_(0),
+isPropellerCatapult_(0),
+isMotorBlocked_(0),
+isNotEnoughForce_(0),
+isBarometerDeadInAir_(0),
+isVibrating_(0),
+isAcceletorOverRange_(0),
+flighAction_(0),
+motorStartFailedCause_(0),
+nonGpsCause_(0),
+waypointLimitMode_(0),
+battery_(0),
+motorRevolution_(0),
+ImuInitFailReason_(0),
+ctrlDevice_(0)
 {
     
 }
@@ -388,3 +415,194 @@ uint8_t FlightControllerStateImp::drone_type() const {
 void FlightControllerStateImp::set_drone_type(uint8_t drone_type) {
     drone_type_ = drone_type;
 }
+
+//Custom
+int32_t FlightControllerStateImp::flyCCommand() const {
+	return flyCCommand_;
+}
+void FlightControllerStateImp::set_flyCCommand(int flyCCommand) {
+	flyCCommand_ = flyCCommand;
+}
+
+int32_t FlightControllerStateImp::canIocWork() const {
+	return canIocWork_;
+}
+void FlightControllerStateImp::set_canIocWork(int canIocWork) {
+	canIocWork_ = canIocWork;
+}
+
+int32_t FlightControllerStateImp::isSwaveWork() const {
+	return isSwaveWork_;
+}
+void FlightControllerStateImp::set_isSwaveWork(int isSwaveWork) {
+	isSwaveWork_ = isSwaveWork;
+}
+
+int32_t FlightControllerStateImp::GoHomeStatus() const {
+	return GoHomeStatus_;
+}
+void FlightControllerStateImp::set_GoHomeStatus(int GoHomeStatus) {
+	GoHomeStatus_ = GoHomeStatus;
+}
+
+int32_t FlightControllerStateImp::isVisionUsed() const {
+	return isVisionUsed_;
+}
+void FlightControllerStateImp::set_isVisionUsed(int isVisionUsed) {
+	isVisionUsed_ = isVisionUsed;
+}
+
+int32_t FlightControllerStateImp::batteryWarning() const {
+	return batteryWarning_;
+}
+void FlightControllerStateImp::set_batteryWarning(int batteryWarning) {
+	batteryWarning_ = batteryWarning;
+}
+
+int32_t FlightControllerStateImp::isImuPreheated() const {
+	return isImuPreheated_;
+}
+void FlightControllerStateImp::set_isImuPreheated(int isImuPreheated) {
+	isImuPreheated_ = isImuPreheated;
+}
+
+int32_t FlightControllerStateImp::modeChannel() const {
+	return modeChannel_;
+}
+void FlightControllerStateImp::set_modeChannel(int modeChannel) {
+	modeChannel_ = modeChannel;
+}
+
+int32_t FlightControllerStateImp::isCompassError() const {
+	return isCompassError_;
+}
+void FlightControllerStateImp::set_isCompassError(int isCompassError) {
+	isCompassError_ = isCompassError;
+}
+
+int32_t FlightControllerStateImp::waveError() const {
+	return waveError_;
+}
+void FlightControllerStateImp::set_waveError(int waveError) {
+	waveError_ = waveError;
+}
+
+int32_t FlightControllerStateImp::batteryType() const {
+	return batteryType_;
+}
+void FlightControllerStateImp::set_batteryType(int batteryType) {
+	batteryType_ = batteryType;
+}
+
+int32_t FlightControllerStateImp::isOutOfLimit() const {
+	return isOutOfLimit_;
+}
+void FlightControllerStateImp::set_isOutOfLimit(int isOutOfLimit) {
+	isOutOfLimit_ = isOutOfLimit;
+}
+
+int32_t FlightControllerStateImp::isGoHomeHeightModified() const {
+	return isGoHomeHeightModified_;
+}
+void FlightControllerStateImp::set_isGoHomeHeightModified(int isGoHomeHeightModified) {
+	isGoHomeHeightModified_ = isGoHomeHeightModified;
+}
+
+int32_t FlightControllerStateImp::isPropellerCatapult() const {
+	return isPropellerCatapult_;
+}
+void FlightControllerStateImp::set_isPropellerCatapult(int isPropellerCatapult) {
+	isPropellerCatapult_ = isPropellerCatapult;
+}
+
+int32_t FlightControllerStateImp::isMotorBlocked() const {
+	return isMotorBlocked_;
+}
+void FlightControllerStateImp::set_isMotorBlocked(int isMotorBlocked) {
+	isMotorBlocked_ = isMotorBlocked;
+}
+
+int32_t FlightControllerStateImp::isNotEnoughForce() const {
+	return isNotEnoughForce_;
+}
+void FlightControllerStateImp::set_isNotEnoughForce(int isNotEnoughForce) {
+	isNotEnoughForce_ = isNotEnoughForce;
+}
+
+int32_t FlightControllerStateImp::isBarometerDeadInAir() const {
+	return isBarometerDeadInAir_;
+}
+void FlightControllerStateImp::set_isBarometerDeadInAir(int isBarometerDeadInAir) {
+	isBarometerDeadInAir_ = isBarometerDeadInAir;
+}
+
+int32_t FlightControllerStateImp::isVibrating() const {
+	return isVibrating_;
+}
+void FlightControllerStateImp::set_isVibrating(int isVibrating) {
+	isVibrating_ = isVibrating;
+}
+
+int32_t FlightControllerStateImp::isAcceletorOverRange() const {
+	return isAcceletorOverRange_;
+}
+void FlightControllerStateImp::set_isAcceletorOverRange(int isAcceletorOverRange) {
+	isAcceletorOverRange_ = isAcceletorOverRange;
+}
+
+int32_t FlightControllerStateImp::flighAction() const {
+	return flighAction_;
+}
+void FlightControllerStateImp::set_flighAction(int flighAction) {
+	flighAction_ = flighAction;
+}
+
+int32_t FlightControllerStateImp::motorStartFailedCause() const {
+	return motorStartFailedCause_;
+}
+void FlightControllerStateImp::set_motorStartFailedCause(int motorStartFailedCause) {
+	motorStartFailedCause_ = motorStartFailedCause;
+}
+
+int32_t FlightControllerStateImp::nonGpsCause() const {
+	return nonGpsCause_;
+}
+void FlightControllerStateImp::set_nonGpsCause(int nonGpsCause) {
+	nonGpsCause_ = nonGpsCause;
+}
+
+int32_t FlightControllerStateImp::waypointLimitMode() const {
+	return waypointLimitMode_;
+}
+void FlightControllerStateImp::set_waypointLimitMode(int waypointLimitMode) {
+	waypointLimitMode_ = waypointLimitMode;
+}
+
+int32_t FlightControllerStateImp::battery() const {
+	return battery_;
+}
+void FlightControllerStateImp::set_battery(int battery) {
+	battery_ = battery;
+}
+
+int32_t FlightControllerStateImp::motorRevolution() const {
+	return motorRevolution_;
+}
+void FlightControllerStateImp::set_motorRevolution(int motorRevolution) {
+	motorRevolution_ = motorRevolution;
+}
+
+int32_t FlightControllerStateImp::ImuInitFailReason() const {
+	return ImuInitFailReason_;
+}
+void FlightControllerStateImp::set_ImuInitFailReason(int ImuInitFailReason) {
+	ImuInitFailReason_ = ImuInitFailReason;
+}
+
+int32_t FlightControllerStateImp::ctrlDevice() const {
+	return ctrlDevice_;
+}
+void FlightControllerStateImp::set_ctrlDevice(int ctrlDevice) {
+	ctrlDevice_ = ctrlDevice;
+}
+

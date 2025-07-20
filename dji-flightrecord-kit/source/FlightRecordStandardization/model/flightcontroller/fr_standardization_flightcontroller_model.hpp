@@ -236,6 +236,89 @@ namespace DJIFR {
             
             uint8_t drone_type() const;
             void set_drone_type(uint8_t drone_type);
+
+            //custom
+            int32_t flyCCommand() const;
+            void set_flyCCommand(int flyCCommand);
+
+            int32_t canIocWork() const;
+            void set_canIocWork(int canIocWork);
+
+            int32_t isSwaveWork() const;
+            void set_isSwaveWork(int isSwaveWork);
+
+            int32_t GoHomeStatus() const;
+            void set_GoHomeStatus(int GoHomeStatus);
+
+            int32_t isVisionUsed() const;
+            void set_isVisionUsed(int isVisionUsed);
+
+            int32_t batteryWarning() const;
+            void set_batteryWarning(int batteryWarning);
+
+            int32_t isImuPreheated() const;
+            void set_isImuPreheated(int isImuPreheated);
+
+            int32_t modeChannel() const;
+            void set_modeChannel(int modeChannel);
+
+            int32_t isCompassError() const;
+            void set_isCompassError(int isCompassError);
+
+            int32_t waveError() const;
+            void set_waveError(int waveError);
+
+            int32_t batteryType() const;
+            void set_batteryType(int batteryType);
+
+            int32_t isOutOfLimit() const;
+            void set_isOutOfLimit(int isOutOfLimit);
+
+            int32_t isGoHomeHeightModified() const;
+            void set_isGoHomeHeightModified(int isGoHomeHeightModified);
+
+            int32_t isPropellerCatapult() const;
+            void set_isPropellerCatapult(int isPropellerCatapult);
+
+            int32_t isMotorBlocked() const;
+            void set_isMotorBlocked(int isMotorBlocked);
+
+            int32_t isNotEnoughForce() const;
+            void set_isNotEnoughForce(int isNotEnoughForce);
+
+            int32_t isBarometerDeadInAir() const;
+            void set_isBarometerDeadInAir(int isBarometerDeadInAir);
+
+            int32_t isVibrating() const;
+            void set_isVibrating(int isVibrating);
+
+            int32_t isAcceletorOverRange() const;
+            void set_isAcceletorOverRange(int isAcceletorOverRange);
+
+            int32_t flighAction() const;
+            void set_flighAction(int flighAction);
+
+            int32_t motorStartFailedCause() const;
+            void set_motorStartFailedCause(int motorStartFailedCause);
+
+            int32_t nonGpsCause() const;
+            void set_nonGpsCause(int nonGpsCause);
+
+            int32_t waypointLimitMode() const;
+            void set_waypointLimitMode(int waypointLimitMode);
+
+            int32_t battery() const;
+            void set_battery(int battery);
+
+            int32_t motorRevolution() const;
+            void set_motorRevolution(int motorRevolution);
+
+            int32_t ImuInitFailReason() const;
+            void set_ImuInitFailReason(int ImuInitFailReason);
+
+            int32_t ctrlDevice() const;
+            void set_ctrlDevice(int ctrlDevice);
+
             
         private:
             AttitudeSharedPtr attitude_;
@@ -301,6 +384,35 @@ namespace DJIFR {
             uint8_t versionC_;
             
             uint8_t drone_type_;
+
+            //Custom
+            int32_t flyCCommand_;
+            int32_t canIocWork_;
+            int32_t isSwaveWork_;
+            int32_t GoHomeStatus_;
+            int32_t isVisionUsed_;
+            int32_t batteryWarning_;
+            int32_t isImuPreheated_;
+            int32_t modeChannel_;
+            int32_t isCompassError_;
+            int32_t waveError_;
+            int32_t batteryType_;
+            int32_t isOutOfLimit_;
+            int32_t isGoHomeHeightModified_;
+            int32_t isPropellerCatapult_;
+            int32_t isMotorBlocked_;
+            int32_t isNotEnoughForce_;
+            int32_t isBarometerDeadInAir_;
+            int32_t isVibrating_;
+            int32_t isAcceletorOverRange_;
+            int32_t flighAction_;
+            int32_t motorStartFailedCause_;
+            int32_t nonGpsCause_;
+            int32_t waypointLimitMode_;
+            int32_t battery_;
+            int32_t motorRevolution_;
+            int32_t ImuInitFailReason_;
+            int32_t ctrlDevice_;
         };
     }
 }

@@ -356,6 +356,35 @@ namespace DJIFR {
             /// It is only valid when  `smartRTHState`  is
             /// `DJIFlightControllerSmartRTHStateCountingDown`.
             virtual int32_t smartRTHCountdown() const = 0;
+
+            //Custom
+            virtual int32_t flyCCommand() const = 0;
+            virtual int32_t canIocWork() const = 0;
+            virtual int32_t isSwaveWork() const = 0;
+            virtual int32_t GoHomeStatus() const = 0;
+            virtual int32_t isVisionUsed() const = 0;
+            virtual int32_t batteryWarning() const = 0;
+            virtual int32_t isImuPreheated() const = 0;
+            virtual int32_t modeChannel() const = 0;
+            virtual int32_t isCompassError() const = 0;
+            virtual int32_t waveError() const = 0;
+            virtual int32_t batteryType() const = 0;
+            virtual int32_t isOutOfLimit() const = 0;
+            virtual int32_t isGoHomeHeightModified() const = 0;
+            virtual int32_t isPropellerCatapult() const = 0;
+            virtual int32_t isMotorBlocked() const = 0;
+            virtual int32_t isNotEnoughForce() const = 0;
+            virtual int32_t isBarometerDeadInAir() const = 0;
+            virtual int32_t isVibrating() const = 0;
+            virtual int32_t isAcceletorOverRange() const = 0;
+            virtual int32_t flighAction() const = 0;
+            virtual int32_t motorStartFailedCause() const = 0;
+            virtual int32_t nonGpsCause() const = 0;
+            virtual int32_t waypointLimitMode() const = 0;
+            virtual int32_t battery() const = 0;
+            virtual int32_t motorRevolution() const = 0;
+            virtual int32_t ImuInitFailReason() const = 0;
+            virtual int32_t ctrlDevice() const = 0;
         };
     
         using FlightControllerStateSharedPtr = std::shared_ptr<FlightControllerState>;

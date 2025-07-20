@@ -1763,6 +1763,33 @@ class FlightControllerState final :
     kFlightTimeInSecondsFieldNumber = 28,
     kCumulativeFlightDistanceFieldNumber = 29,
     kVpsHeightFieldNumber = 30,
+    kFlyCCommandFieldNumber = 31,
+    kCanIocWorkFieldNumber = 32,
+    kIsSwaveWorkFieldNumber = 33,
+    kGoHomeStatusFieldNumber = 34,
+    kIsVisionUsedFieldNumber = 35,
+    kBatteryWarningFieldNumber = 36,
+    kIsImuPreheatedFieldNumber = 37,
+    kModeChannelFieldNumber = 38,
+    kIsCompassErrorFieldNumber = 39,
+    kWaveErrorFieldNumber = 40,
+    kBatteryTypeFieldNumber = 41,
+    kIsOutOfLimitFieldNumber = 42,
+    kIsGoHomeHeightModifiedFieldNumber = 43,
+    kIsPropellerCatapultFieldNumber = 44,
+    kIsMotorBlockedFieldNumber = 45,
+    kIsNotEnoughForceFieldNumber = 46,
+    kIsBarometerDeadInAirFieldNumber = 47,
+    kIsVibratingFieldNumber = 48,
+    kIsAcceletorOverRangeFieldNumber = 49,
+    kFlighActionFieldNumber = 50,
+    kMotorStartFailedCauseFieldNumber = 51,
+    kNonGpsCauseFieldNumber = 52,
+    kWaypointLimitModeFieldNumber = 53,
+    kBatteryFieldNumber = 54,
+    kMotorRevolutionFieldNumber = 55,
+    kImuInitFailReasonFieldNumber = 56,
+    kCtrlDeviceFieldNumber = 57,
   };
   // .DJIFRProto.Standard.Attitude attitude = 1;
   bool has_attitude() const;
@@ -2079,6 +2106,249 @@ class FlightControllerState final :
   void _internal_set_vpsheight(float value);
   public:
 
+  // int32 flyCCommand = 31;
+  void clear_flyccommand();
+  int32_t flyccommand() const;
+  void set_flyccommand(int32_t value);
+  private:
+  int32_t _internal_flyccommand() const;
+  void _internal_set_flyccommand(int32_t value);
+  public:
+
+  // int32 canIocWork = 32;
+  void clear_caniocwork();
+  int32_t caniocwork() const;
+  void set_caniocwork(int32_t value);
+  private:
+  int32_t _internal_caniocwork() const;
+  void _internal_set_caniocwork(int32_t value);
+  public:
+
+  // int32 isSwaveWork = 33;
+  void clear_isswavework();
+  int32_t isswavework() const;
+  void set_isswavework(int32_t value);
+  private:
+  int32_t _internal_isswavework() const;
+  void _internal_set_isswavework(int32_t value);
+  public:
+
+  // int32 GoHomeStatus = 34;
+  void clear_gohomestatus();
+  int32_t gohomestatus() const;
+  void set_gohomestatus(int32_t value);
+  private:
+  int32_t _internal_gohomestatus() const;
+  void _internal_set_gohomestatus(int32_t value);
+  public:
+
+  // int32 isVisionUsed = 35;
+  void clear_isvisionused();
+  int32_t isvisionused() const;
+  void set_isvisionused(int32_t value);
+  private:
+  int32_t _internal_isvisionused() const;
+  void _internal_set_isvisionused(int32_t value);
+  public:
+
+  // int32 batteryWarning = 36;
+  void clear_batterywarning();
+  int32_t batterywarning() const;
+  void set_batterywarning(int32_t value);
+  private:
+  int32_t _internal_batterywarning() const;
+  void _internal_set_batterywarning(int32_t value);
+  public:
+
+  // int32 isImuPreheated = 37;
+  void clear_isimupreheated();
+  int32_t isimupreheated() const;
+  void set_isimupreheated(int32_t value);
+  private:
+  int32_t _internal_isimupreheated() const;
+  void _internal_set_isimupreheated(int32_t value);
+  public:
+
+  // int32 modeChannel = 38;
+  void clear_modechannel();
+  int32_t modechannel() const;
+  void set_modechannel(int32_t value);
+  private:
+  int32_t _internal_modechannel() const;
+  void _internal_set_modechannel(int32_t value);
+  public:
+
+  // int32 isCompassError = 39;
+  void clear_iscompasserror();
+  int32_t iscompasserror() const;
+  void set_iscompasserror(int32_t value);
+  private:
+  int32_t _internal_iscompasserror() const;
+  void _internal_set_iscompasserror(int32_t value);
+  public:
+
+  // int32 waveError = 40;
+  void clear_waveerror();
+  int32_t waveerror() const;
+  void set_waveerror(int32_t value);
+  private:
+  int32_t _internal_waveerror() const;
+  void _internal_set_waveerror(int32_t value);
+  public:
+
+  // int32 batteryType = 41;
+  void clear_batterytype();
+  int32_t batterytype() const;
+  void set_batterytype(int32_t value);
+  private:
+  int32_t _internal_batterytype() const;
+  void _internal_set_batterytype(int32_t value);
+  public:
+
+  // int32 isOutOfLimit = 42;
+  void clear_isoutoflimit();
+  int32_t isoutoflimit() const;
+  void set_isoutoflimit(int32_t value);
+  private:
+  int32_t _internal_isoutoflimit() const;
+  void _internal_set_isoutoflimit(int32_t value);
+  public:
+
+  // int32 isGoHomeHeightModified = 43;
+  void clear_isgohomeheightmodified();
+  int32_t isgohomeheightmodified() const;
+  void set_isgohomeheightmodified(int32_t value);
+  private:
+  int32_t _internal_isgohomeheightmodified() const;
+  void _internal_set_isgohomeheightmodified(int32_t value);
+  public:
+
+  // int32 isPropellerCatapult = 44;
+  void clear_ispropellercatapult();
+  int32_t ispropellercatapult() const;
+  void set_ispropellercatapult(int32_t value);
+  private:
+  int32_t _internal_ispropellercatapult() const;
+  void _internal_set_ispropellercatapult(int32_t value);
+  public:
+
+  // int32 isMotorBlocked = 45;
+  void clear_ismotorblocked();
+  int32_t ismotorblocked() const;
+  void set_ismotorblocked(int32_t value);
+  private:
+  int32_t _internal_ismotorblocked() const;
+  void _internal_set_ismotorblocked(int32_t value);
+  public:
+
+  // int32 isNotEnoughForce = 46;
+  void clear_isnotenoughforce();
+  int32_t isnotenoughforce() const;
+  void set_isnotenoughforce(int32_t value);
+  private:
+  int32_t _internal_isnotenoughforce() const;
+  void _internal_set_isnotenoughforce(int32_t value);
+  public:
+
+  // int32 isBarometerDeadInAir = 47;
+  void clear_isbarometerdeadinair();
+  int32_t isbarometerdeadinair() const;
+  void set_isbarometerdeadinair(int32_t value);
+  private:
+  int32_t _internal_isbarometerdeadinair() const;
+  void _internal_set_isbarometerdeadinair(int32_t value);
+  public:
+
+  // int32 isVibrating = 48;
+  void clear_isvibrating();
+  int32_t isvibrating() const;
+  void set_isvibrating(int32_t value);
+  private:
+  int32_t _internal_isvibrating() const;
+  void _internal_set_isvibrating(int32_t value);
+  public:
+
+  // int32 isAcceletorOverRange = 49;
+  void clear_isacceletoroverrange();
+  int32_t isacceletoroverrange() const;
+  void set_isacceletoroverrange(int32_t value);
+  private:
+  int32_t _internal_isacceletoroverrange() const;
+  void _internal_set_isacceletoroverrange(int32_t value);
+  public:
+
+  // int32 flighAction = 50;
+  void clear_flighaction();
+  int32_t flighaction() const;
+  void set_flighaction(int32_t value);
+  private:
+  int32_t _internal_flighaction() const;
+  void _internal_set_flighaction(int32_t value);
+  public:
+
+  // int32 motorStartFailedCause = 51;
+  void clear_motorstartfailedcause();
+  int32_t motorstartfailedcause() const;
+  void set_motorstartfailedcause(int32_t value);
+  private:
+  int32_t _internal_motorstartfailedcause() const;
+  void _internal_set_motorstartfailedcause(int32_t value);
+  public:
+
+  // int32 nonGpsCause = 52;
+  void clear_nongpscause();
+  int32_t nongpscause() const;
+  void set_nongpscause(int32_t value);
+  private:
+  int32_t _internal_nongpscause() const;
+  void _internal_set_nongpscause(int32_t value);
+  public:
+
+  // int32 waypointLimitMode = 53;
+  void clear_waypointlimitmode();
+  int32_t waypointlimitmode() const;
+  void set_waypointlimitmode(int32_t value);
+  private:
+  int32_t _internal_waypointlimitmode() const;
+  void _internal_set_waypointlimitmode(int32_t value);
+  public:
+
+  // int32 battery = 54;
+  void clear_battery();
+  int32_t battery() const;
+  void set_battery(int32_t value);
+  private:
+  int32_t _internal_battery() const;
+  void _internal_set_battery(int32_t value);
+  public:
+
+  // int32 motorRevolution = 55;
+  void clear_motorrevolution();
+  int32_t motorrevolution() const;
+  void set_motorrevolution(int32_t value);
+  private:
+  int32_t _internal_motorrevolution() const;
+  void _internal_set_motorrevolution(int32_t value);
+  public:
+
+  // int32 ImuInitFailReason = 56;
+  void clear_imuinitfailreason();
+  int32_t imuinitfailreason() const;
+  void set_imuinitfailreason(int32_t value);
+  private:
+  int32_t _internal_imuinitfailreason() const;
+  void _internal_set_imuinitfailreason(int32_t value);
+  public:
+
+  // int32 ctrlDevice = 57;
+  void clear_ctrldevice();
+  int32_t ctrldevice() const;
+  void set_ctrldevice(int32_t value);
+  private:
+  int32_t _internal_ctrldevice() const;
+  void _internal_set_ctrldevice(int32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:DJIFRProto.Standard.FlightControllerState)
  private:
   class _Internal;
@@ -2117,6 +2387,33 @@ class FlightControllerState final :
     double flighttimeinseconds_;
     double cumulativeflightdistance_;
     float vpsheight_;
+    int32_t flyccommand_;
+    int32_t caniocwork_;
+    int32_t isswavework_;
+    int32_t gohomestatus_;
+    int32_t isvisionused_;
+    int32_t batterywarning_;
+    int32_t isimupreheated_;
+    int32_t modechannel_;
+    int32_t iscompasserror_;
+    int32_t waveerror_;
+    int32_t batterytype_;
+    int32_t isoutoflimit_;
+    int32_t isgohomeheightmodified_;
+    int32_t ispropellercatapult_;
+    int32_t ismotorblocked_;
+    int32_t isnotenoughforce_;
+    int32_t isbarometerdeadinair_;
+    int32_t isvibrating_;
+    int32_t isacceletoroverrange_;
+    int32_t flighaction_;
+    int32_t motorstartfailedcause_;
+    int32_t nongpscause_;
+    int32_t waypointlimitmode_;
+    int32_t battery_;
+    int32_t motorrevolution_;
+    int32_t imuinitfailreason_;
+    int32_t ctrldevice_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3253,6 +3550,546 @@ inline void FlightControllerState::_internal_set_vpsheight(float value) {
 inline void FlightControllerState::set_vpsheight(float value) {
   _internal_set_vpsheight(value);
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.vpsHeight)
+}
+
+// int32 flyCCommand = 31;
+inline void FlightControllerState::clear_flyccommand() {
+  _impl_.flyccommand_ = 0;
+}
+inline int32_t FlightControllerState::_internal_flyccommand() const {
+  return _impl_.flyccommand_;
+}
+inline int32_t FlightControllerState::flyccommand() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.flyCCommand)
+  return _internal_flyccommand();
+}
+inline void FlightControllerState::_internal_set_flyccommand(int32_t value) {
+  
+  _impl_.flyccommand_ = value;
+}
+inline void FlightControllerState::set_flyccommand(int32_t value) {
+  _internal_set_flyccommand(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.flyCCommand)
+}
+
+// int32 canIocWork = 32;
+inline void FlightControllerState::clear_caniocwork() {
+  _impl_.caniocwork_ = 0;
+}
+inline int32_t FlightControllerState::_internal_caniocwork() const {
+  return _impl_.caniocwork_;
+}
+inline int32_t FlightControllerState::caniocwork() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.canIocWork)
+  return _internal_caniocwork();
+}
+inline void FlightControllerState::_internal_set_caniocwork(int32_t value) {
+  
+  _impl_.caniocwork_ = value;
+}
+inline void FlightControllerState::set_caniocwork(int32_t value) {
+  _internal_set_caniocwork(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.canIocWork)
+}
+
+// int32 isSwaveWork = 33;
+inline void FlightControllerState::clear_isswavework() {
+  _impl_.isswavework_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isswavework() const {
+  return _impl_.isswavework_;
+}
+inline int32_t FlightControllerState::isswavework() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isSwaveWork)
+  return _internal_isswavework();
+}
+inline void FlightControllerState::_internal_set_isswavework(int32_t value) {
+  
+  _impl_.isswavework_ = value;
+}
+inline void FlightControllerState::set_isswavework(int32_t value) {
+  _internal_set_isswavework(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isSwaveWork)
+}
+
+// int32 GoHomeStatus = 34;
+inline void FlightControllerState::clear_gohomestatus() {
+  _impl_.gohomestatus_ = 0;
+}
+inline int32_t FlightControllerState::_internal_gohomestatus() const {
+  return _impl_.gohomestatus_;
+}
+inline int32_t FlightControllerState::gohomestatus() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.GoHomeStatus)
+  return _internal_gohomestatus();
+}
+inline void FlightControllerState::_internal_set_gohomestatus(int32_t value) {
+  
+  _impl_.gohomestatus_ = value;
+}
+inline void FlightControllerState::set_gohomestatus(int32_t value) {
+  _internal_set_gohomestatus(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.GoHomeStatus)
+}
+
+// int32 isVisionUsed = 35;
+inline void FlightControllerState::clear_isvisionused() {
+  _impl_.isvisionused_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isvisionused() const {
+  return _impl_.isvisionused_;
+}
+inline int32_t FlightControllerState::isvisionused() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isVisionUsed)
+  return _internal_isvisionused();
+}
+inline void FlightControllerState::_internal_set_isvisionused(int32_t value) {
+  
+  _impl_.isvisionused_ = value;
+}
+inline void FlightControllerState::set_isvisionused(int32_t value) {
+  _internal_set_isvisionused(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isVisionUsed)
+}
+
+// int32 batteryWarning = 36;
+inline void FlightControllerState::clear_batterywarning() {
+  _impl_.batterywarning_ = 0;
+}
+inline int32_t FlightControllerState::_internal_batterywarning() const {
+  return _impl_.batterywarning_;
+}
+inline int32_t FlightControllerState::batterywarning() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.batteryWarning)
+  return _internal_batterywarning();
+}
+inline void FlightControllerState::_internal_set_batterywarning(int32_t value) {
+  
+  _impl_.batterywarning_ = value;
+}
+inline void FlightControllerState::set_batterywarning(int32_t value) {
+  _internal_set_batterywarning(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.batteryWarning)
+}
+
+// int32 isImuPreheated = 37;
+inline void FlightControllerState::clear_isimupreheated() {
+  _impl_.isimupreheated_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isimupreheated() const {
+  return _impl_.isimupreheated_;
+}
+inline int32_t FlightControllerState::isimupreheated() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isImuPreheated)
+  return _internal_isimupreheated();
+}
+inline void FlightControllerState::_internal_set_isimupreheated(int32_t value) {
+  
+  _impl_.isimupreheated_ = value;
+}
+inline void FlightControllerState::set_isimupreheated(int32_t value) {
+  _internal_set_isimupreheated(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isImuPreheated)
+}
+
+// int32 modeChannel = 38;
+inline void FlightControllerState::clear_modechannel() {
+  _impl_.modechannel_ = 0;
+}
+inline int32_t FlightControllerState::_internal_modechannel() const {
+  return _impl_.modechannel_;
+}
+inline int32_t FlightControllerState::modechannel() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.modeChannel)
+  return _internal_modechannel();
+}
+inline void FlightControllerState::_internal_set_modechannel(int32_t value) {
+  
+  _impl_.modechannel_ = value;
+}
+inline void FlightControllerState::set_modechannel(int32_t value) {
+  _internal_set_modechannel(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.modeChannel)
+}
+
+// int32 isCompassError = 39;
+inline void FlightControllerState::clear_iscompasserror() {
+  _impl_.iscompasserror_ = 0;
+}
+inline int32_t FlightControllerState::_internal_iscompasserror() const {
+  return _impl_.iscompasserror_;
+}
+inline int32_t FlightControllerState::iscompasserror() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isCompassError)
+  return _internal_iscompasserror();
+}
+inline void FlightControllerState::_internal_set_iscompasserror(int32_t value) {
+  
+  _impl_.iscompasserror_ = value;
+}
+inline void FlightControllerState::set_iscompasserror(int32_t value) {
+  _internal_set_iscompasserror(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isCompassError)
+}
+
+// int32 waveError = 40;
+inline void FlightControllerState::clear_waveerror() {
+  _impl_.waveerror_ = 0;
+}
+inline int32_t FlightControllerState::_internal_waveerror() const {
+  return _impl_.waveerror_;
+}
+inline int32_t FlightControllerState::waveerror() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.waveError)
+  return _internal_waveerror();
+}
+inline void FlightControllerState::_internal_set_waveerror(int32_t value) {
+  
+  _impl_.waveerror_ = value;
+}
+inline void FlightControllerState::set_waveerror(int32_t value) {
+  _internal_set_waveerror(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.waveError)
+}
+
+// int32 batteryType = 41;
+inline void FlightControllerState::clear_batterytype() {
+  _impl_.batterytype_ = 0;
+}
+inline int32_t FlightControllerState::_internal_batterytype() const {
+  return _impl_.batterytype_;
+}
+inline int32_t FlightControllerState::batterytype() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.batteryType)
+  return _internal_batterytype();
+}
+inline void FlightControllerState::_internal_set_batterytype(int32_t value) {
+  
+  _impl_.batterytype_ = value;
+}
+inline void FlightControllerState::set_batterytype(int32_t value) {
+  _internal_set_batterytype(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.batteryType)
+}
+
+// int32 isOutOfLimit = 42;
+inline void FlightControllerState::clear_isoutoflimit() {
+  _impl_.isoutoflimit_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isoutoflimit() const {
+  return _impl_.isoutoflimit_;
+}
+inline int32_t FlightControllerState::isoutoflimit() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isOutOfLimit)
+  return _internal_isoutoflimit();
+}
+inline void FlightControllerState::_internal_set_isoutoflimit(int32_t value) {
+  
+  _impl_.isoutoflimit_ = value;
+}
+inline void FlightControllerState::set_isoutoflimit(int32_t value) {
+  _internal_set_isoutoflimit(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isOutOfLimit)
+}
+
+// int32 isGoHomeHeightModified = 43;
+inline void FlightControllerState::clear_isgohomeheightmodified() {
+  _impl_.isgohomeheightmodified_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isgohomeheightmodified() const {
+  return _impl_.isgohomeheightmodified_;
+}
+inline int32_t FlightControllerState::isgohomeheightmodified() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isGoHomeHeightModified)
+  return _internal_isgohomeheightmodified();
+}
+inline void FlightControllerState::_internal_set_isgohomeheightmodified(int32_t value) {
+  
+  _impl_.isgohomeheightmodified_ = value;
+}
+inline void FlightControllerState::set_isgohomeheightmodified(int32_t value) {
+  _internal_set_isgohomeheightmodified(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isGoHomeHeightModified)
+}
+
+// int32 isPropellerCatapult = 44;
+inline void FlightControllerState::clear_ispropellercatapult() {
+  _impl_.ispropellercatapult_ = 0;
+}
+inline int32_t FlightControllerState::_internal_ispropellercatapult() const {
+  return _impl_.ispropellercatapult_;
+}
+inline int32_t FlightControllerState::ispropellercatapult() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isPropellerCatapult)
+  return _internal_ispropellercatapult();
+}
+inline void FlightControllerState::_internal_set_ispropellercatapult(int32_t value) {
+  
+  _impl_.ispropellercatapult_ = value;
+}
+inline void FlightControllerState::set_ispropellercatapult(int32_t value) {
+  _internal_set_ispropellercatapult(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isPropellerCatapult)
+}
+
+// int32 isMotorBlocked = 45;
+inline void FlightControllerState::clear_ismotorblocked() {
+  _impl_.ismotorblocked_ = 0;
+}
+inline int32_t FlightControllerState::_internal_ismotorblocked() const {
+  return _impl_.ismotorblocked_;
+}
+inline int32_t FlightControllerState::ismotorblocked() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isMotorBlocked)
+  return _internal_ismotorblocked();
+}
+inline void FlightControllerState::_internal_set_ismotorblocked(int32_t value) {
+  
+  _impl_.ismotorblocked_ = value;
+}
+inline void FlightControllerState::set_ismotorblocked(int32_t value) {
+  _internal_set_ismotorblocked(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isMotorBlocked)
+}
+
+// int32 isNotEnoughForce = 46;
+inline void FlightControllerState::clear_isnotenoughforce() {
+  _impl_.isnotenoughforce_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isnotenoughforce() const {
+  return _impl_.isnotenoughforce_;
+}
+inline int32_t FlightControllerState::isnotenoughforce() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isNotEnoughForce)
+  return _internal_isnotenoughforce();
+}
+inline void FlightControllerState::_internal_set_isnotenoughforce(int32_t value) {
+  
+  _impl_.isnotenoughforce_ = value;
+}
+inline void FlightControllerState::set_isnotenoughforce(int32_t value) {
+  _internal_set_isnotenoughforce(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isNotEnoughForce)
+}
+
+// int32 isBarometerDeadInAir = 47;
+inline void FlightControllerState::clear_isbarometerdeadinair() {
+  _impl_.isbarometerdeadinair_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isbarometerdeadinair() const {
+  return _impl_.isbarometerdeadinair_;
+}
+inline int32_t FlightControllerState::isbarometerdeadinair() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isBarometerDeadInAir)
+  return _internal_isbarometerdeadinair();
+}
+inline void FlightControllerState::_internal_set_isbarometerdeadinair(int32_t value) {
+  
+  _impl_.isbarometerdeadinair_ = value;
+}
+inline void FlightControllerState::set_isbarometerdeadinair(int32_t value) {
+  _internal_set_isbarometerdeadinair(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isBarometerDeadInAir)
+}
+
+// int32 isVibrating = 48;
+inline void FlightControllerState::clear_isvibrating() {
+  _impl_.isvibrating_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isvibrating() const {
+  return _impl_.isvibrating_;
+}
+inline int32_t FlightControllerState::isvibrating() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isVibrating)
+  return _internal_isvibrating();
+}
+inline void FlightControllerState::_internal_set_isvibrating(int32_t value) {
+  
+  _impl_.isvibrating_ = value;
+}
+inline void FlightControllerState::set_isvibrating(int32_t value) {
+  _internal_set_isvibrating(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isVibrating)
+}
+
+// int32 isAcceletorOverRange = 49;
+inline void FlightControllerState::clear_isacceletoroverrange() {
+  _impl_.isacceletoroverrange_ = 0;
+}
+inline int32_t FlightControllerState::_internal_isacceletoroverrange() const {
+  return _impl_.isacceletoroverrange_;
+}
+inline int32_t FlightControllerState::isacceletoroverrange() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isAcceletorOverRange)
+  return _internal_isacceletoroverrange();
+}
+inline void FlightControllerState::_internal_set_isacceletoroverrange(int32_t value) {
+  
+  _impl_.isacceletoroverrange_ = value;
+}
+inline void FlightControllerState::set_isacceletoroverrange(int32_t value) {
+  _internal_set_isacceletoroverrange(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isAcceletorOverRange)
+}
+
+// int32 flighAction = 50;
+inline void FlightControllerState::clear_flighaction() {
+  _impl_.flighaction_ = 0;
+}
+inline int32_t FlightControllerState::_internal_flighaction() const {
+  return _impl_.flighaction_;
+}
+inline int32_t FlightControllerState::flighaction() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.flighAction)
+  return _internal_flighaction();
+}
+inline void FlightControllerState::_internal_set_flighaction(int32_t value) {
+  
+  _impl_.flighaction_ = value;
+}
+inline void FlightControllerState::set_flighaction(int32_t value) {
+  _internal_set_flighaction(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.flighAction)
+}
+
+// int32 motorStartFailedCause = 51;
+inline void FlightControllerState::clear_motorstartfailedcause() {
+  _impl_.motorstartfailedcause_ = 0;
+}
+inline int32_t FlightControllerState::_internal_motorstartfailedcause() const {
+  return _impl_.motorstartfailedcause_;
+}
+inline int32_t FlightControllerState::motorstartfailedcause() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.motorStartFailedCause)
+  return _internal_motorstartfailedcause();
+}
+inline void FlightControllerState::_internal_set_motorstartfailedcause(int32_t value) {
+  
+  _impl_.motorstartfailedcause_ = value;
+}
+inline void FlightControllerState::set_motorstartfailedcause(int32_t value) {
+  _internal_set_motorstartfailedcause(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.motorStartFailedCause)
+}
+
+// int32 nonGpsCause = 52;
+inline void FlightControllerState::clear_nongpscause() {
+  _impl_.nongpscause_ = 0;
+}
+inline int32_t FlightControllerState::_internal_nongpscause() const {
+  return _impl_.nongpscause_;
+}
+inline int32_t FlightControllerState::nongpscause() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.nonGpsCause)
+  return _internal_nongpscause();
+}
+inline void FlightControllerState::_internal_set_nongpscause(int32_t value) {
+  
+  _impl_.nongpscause_ = value;
+}
+inline void FlightControllerState::set_nongpscause(int32_t value) {
+  _internal_set_nongpscause(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.nonGpsCause)
+}
+
+// int32 waypointLimitMode = 53;
+inline void FlightControllerState::clear_waypointlimitmode() {
+  _impl_.waypointlimitmode_ = 0;
+}
+inline int32_t FlightControllerState::_internal_waypointlimitmode() const {
+  return _impl_.waypointlimitmode_;
+}
+inline int32_t FlightControllerState::waypointlimitmode() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.waypointLimitMode)
+  return _internal_waypointlimitmode();
+}
+inline void FlightControllerState::_internal_set_waypointlimitmode(int32_t value) {
+  
+  _impl_.waypointlimitmode_ = value;
+}
+inline void FlightControllerState::set_waypointlimitmode(int32_t value) {
+  _internal_set_waypointlimitmode(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.waypointLimitMode)
+}
+
+// int32 battery = 54;
+inline void FlightControllerState::clear_battery() {
+  _impl_.battery_ = 0;
+}
+inline int32_t FlightControllerState::_internal_battery() const {
+  return _impl_.battery_;
+}
+inline int32_t FlightControllerState::battery() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.battery)
+  return _internal_battery();
+}
+inline void FlightControllerState::_internal_set_battery(int32_t value) {
+  
+  _impl_.battery_ = value;
+}
+inline void FlightControllerState::set_battery(int32_t value) {
+  _internal_set_battery(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.battery)
+}
+
+// int32 motorRevolution = 55;
+inline void FlightControllerState::clear_motorrevolution() {
+  _impl_.motorrevolution_ = 0;
+}
+inline int32_t FlightControllerState::_internal_motorrevolution() const {
+  return _impl_.motorrevolution_;
+}
+inline int32_t FlightControllerState::motorrevolution() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.motorRevolution)
+  return _internal_motorrevolution();
+}
+inline void FlightControllerState::_internal_set_motorrevolution(int32_t value) {
+  
+  _impl_.motorrevolution_ = value;
+}
+inline void FlightControllerState::set_motorrevolution(int32_t value) {
+  _internal_set_motorrevolution(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.motorRevolution)
+}
+
+// int32 ImuInitFailReason = 56;
+inline void FlightControllerState::clear_imuinitfailreason() {
+  _impl_.imuinitfailreason_ = 0;
+}
+inline int32_t FlightControllerState::_internal_imuinitfailreason() const {
+  return _impl_.imuinitfailreason_;
+}
+inline int32_t FlightControllerState::imuinitfailreason() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.ImuInitFailReason)
+  return _internal_imuinitfailreason();
+}
+inline void FlightControllerState::_internal_set_imuinitfailreason(int32_t value) {
+  
+  _impl_.imuinitfailreason_ = value;
+}
+inline void FlightControllerState::set_imuinitfailreason(int32_t value) {
+  _internal_set_imuinitfailreason(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.ImuInitFailReason)
+}
+
+// int32 ctrlDevice = 57;
+inline void FlightControllerState::clear_ctrldevice() {
+  _impl_.ctrldevice_ = 0;
+}
+inline int32_t FlightControllerState::_internal_ctrldevice() const {
+  return _impl_.ctrldevice_;
+}
+inline int32_t FlightControllerState::ctrldevice() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.ctrlDevice)
+  return _internal_ctrldevice();
+}
+inline void FlightControllerState::_internal_set_ctrldevice(int32_t value) {
+  
+  _impl_.ctrldevice_ = value;
+}
+inline void FlightControllerState::set_ctrldevice(int32_t value) {
+  _internal_set_ctrldevice(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.ctrlDevice)
 }
 
 #ifdef __GNUC__

@@ -294,8 +294,36 @@ static FlightControllerState ConvertToFlightControllerState(DJIFR::standardizati
     flightControllerState.set_isgpsbeingused(flightController_cpp->isGPSBeingUsed());
     flightControllerState.set_flighttimeinseconds(flightController_cpp->flightTimeInSeconds());
     flightControllerState.set_cumulativeflightdistance(flightController_cpp->cumulativeFlightDistance());
+    //Custom
     flightControllerState.set_vpsheight(flightController_cpp->vpsHeight());
-    
+    flightControllerState.set_flyccommand(flightController_cpp->flyCCommand());
+    flightControllerState.set_caniocwork(flightController_cpp->canIocWork());
+    flightControllerState.set_isswavework(flightController_cpp->isSwaveWork());
+    flightControllerState.set_gohomestatus(flightController_cpp->GoHomeStatus());
+    flightControllerState.set_isvisionused(flightController_cpp->isVisionUsed());
+    flightControllerState.set_batterywarning(flightController_cpp->batteryWarning());
+    flightControllerState.set_isimupreheated(flightController_cpp->isImuPreheated());
+    flightControllerState.set_modechannel(flightController_cpp->modeChannel());
+    flightControllerState.set_iscompasserror(flightController_cpp->isCompassError());
+    flightControllerState.set_waveerror(flightController_cpp->waveError());
+    flightControllerState.set_batterytype(flightController_cpp->batteryType());
+    flightControllerState.set_isoutoflimit(flightController_cpp->isOutOfLimit());
+    flightControllerState.set_isgohomeheightmodified(flightController_cpp->isGoHomeHeightModified());
+    flightControllerState.set_ispropellercatapult(flightController_cpp->isPropellerCatapult());
+    flightControllerState.set_ismotorblocked(flightController_cpp->isMotorBlocked());
+    flightControllerState.set_isnotenoughforce(flightController_cpp->isNotEnoughForce());
+    flightControllerState.set_isbarometerdeadinair(flightController_cpp->isBarometerDeadInAir());
+    flightControllerState.set_isvibrating(flightController_cpp->isVibrating());
+    flightControllerState.set_isacceletoroverrange(flightController_cpp->isAcceletorOverRange());
+    flightControllerState.set_flighaction(flightController_cpp->flighAction());
+    flightControllerState.set_motorstartfailedcause(flightController_cpp->motorStartFailedCause());
+    flightControllerState.set_nongpscause(flightController_cpp->nonGpsCause());
+    flightControllerState.set_waypointlimitmode(flightController_cpp->waypointLimitMode());
+    flightControllerState.set_battery(flightController_cpp->battery());
+    flightControllerState.set_motorrevolution(flightController_cpp->motorRevolution());
+    flightControllerState.set_imuinitfailreason(flightController_cpp->ImuInitFailReason());
+    flightControllerState.set_ctrldevice(flightController_cpp->ctrlDevice());
+
     return flightControllerState;
 }
 

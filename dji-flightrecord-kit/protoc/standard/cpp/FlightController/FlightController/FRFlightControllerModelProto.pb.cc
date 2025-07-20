@@ -151,6 +151,33 @@ PROTOBUF_CONSTEXPR FlightControllerState::FlightControllerState(
   , /*decltype(_impl_.flighttimeinseconds_)*/0
   , /*decltype(_impl_.cumulativeflightdistance_)*/0
   , /*decltype(_impl_.vpsheight_)*/0
+  , /*decltype(_impl_.flyccommand_)*/0
+  , /*decltype(_impl_.caniocwork_)*/0
+  , /*decltype(_impl_.isswavework_)*/0
+  , /*decltype(_impl_.gohomestatus_)*/0
+  , /*decltype(_impl_.isvisionused_)*/0
+  , /*decltype(_impl_.batterywarning_)*/0
+  , /*decltype(_impl_.isimupreheated_)*/0
+  , /*decltype(_impl_.modechannel_)*/0
+  , /*decltype(_impl_.iscompasserror_)*/0
+  , /*decltype(_impl_.waveerror_)*/0
+  , /*decltype(_impl_.batterytype_)*/0
+  , /*decltype(_impl_.isoutoflimit_)*/0
+  , /*decltype(_impl_.isgohomeheightmodified_)*/0
+  , /*decltype(_impl_.ispropellercatapult_)*/0
+  , /*decltype(_impl_.ismotorblocked_)*/0
+  , /*decltype(_impl_.isnotenoughforce_)*/0
+  , /*decltype(_impl_.isbarometerdeadinair_)*/0
+  , /*decltype(_impl_.isvibrating_)*/0
+  , /*decltype(_impl_.isacceletoroverrange_)*/0
+  , /*decltype(_impl_.flighaction_)*/0
+  , /*decltype(_impl_.motorstartfailedcause_)*/0
+  , /*decltype(_impl_.nongpscause_)*/0
+  , /*decltype(_impl_.waypointlimitmode_)*/0
+  , /*decltype(_impl_.battery_)*/0
+  , /*decltype(_impl_.motorrevolution_)*/0
+  , /*decltype(_impl_.imuinitfailreason_)*/0
+  , /*decltype(_impl_.ctrldevice_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FlightControllerStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FlightControllerStateDefaultTypeInternal()
@@ -260,6 +287,33 @@ const uint32_t TableStruct_FlightController_2fFRFlightControllerModelProto_2epro
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flighttimeinseconds_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.cumulativeflightdistance_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.vpsheight_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flyccommand_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.caniocwork_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isswavework_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.gohomestatus_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isvisionused_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.batterywarning_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isimupreheated_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.modechannel_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.iscompasserror_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.waveerror_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.batterytype_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isoutoflimit_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isgohomeheightmodified_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.ispropellercatapult_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.ismotorblocked_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isnotenoughforce_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isbarometerdeadinair_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isvibrating_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isacceletoroverrange_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flighaction_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.motorstartfailedcause_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.nongpscause_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.waypointlimitmode_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.battery_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.motorrevolution_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.imuinitfailreason_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.ctrldevice_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::DJIFRProto::Standard::FlightWind)},
@@ -313,7 +367,7 @@ const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelP
   ".DJIFRProto.Standard.VirtualStickYawCont"
   "rol.Mode\022[\n\031rollPitchCoordinateSystem\030\010 "
   "\001(\01628.DJIFRProto.Standard.VirtualStickFl"
-  "ightCoordinate.System\"\320\t\n\025FlightControll"
+  "ightCoordinate.System\"\322\016\n\025FlightControll"
   "erState\022/\n\010attitude\030\001 \001(\0132\035.DJIFRProto.S"
   "tandard.Attitude\022I\n\026homeLocationCoordina"
   "te\030\002 \001(\0132).DJIFRProto.Standard.LocationC"
@@ -344,26 +398,42 @@ const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelP
   "\035.DJIFRProto.Standard.Velocity\022\026\n\016isGPSB"
   "eingUsed\030\033 \001(\010\022\033\n\023flightTimeInSeconds\030\034 "
   "\001(\001\022 \n\030cumulativeFlightDistance\030\035 \001(\001\022\021\n"
-  "\tvpsHeight\030\036 \001(\002*\267\003\n\nFlightMode\022\n\n\006Manua"
-  "l\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013\n\007GPS"
-  "Atti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHomeLock"
-  "\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTakeoff\020\n"
-  "\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022\017\n\013GP"
-  "SWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick\020\021\022\024\n"
-  "\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GPSFoll"
-  "owMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033\022\014\n\010G"
-  "PSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016ConfirmLandi"
-  "ng\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&\022\030\n\024A"
-  "ctiveTrackSpotlight\020\'\022\025\n\021MotorsJustStart"
-  "ed\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006proto"
-  "3"
+  "\tvpsHeight\030\036 \001(\002\022\023\n\013flyCCommand\030\037 \001(\005\022\022\n"
+  "\ncanIocWork\030  \001(\005\022\023\n\013isSwaveWork\030! \001(\005\022\024"
+  "\n\014GoHomeStatus\030\" \001(\005\022\024\n\014isVisionUsed\030# \001"
+  "(\005\022\026\n\016batteryWarning\030$ \001(\005\022\026\n\016isImuPrehe"
+  "ated\030% \001(\005\022\023\n\013modeChannel\030& \001(\005\022\026\n\016isCom"
+  "passError\030\' \001(\005\022\021\n\twaveError\030( \001(\005\022\023\n\013ba"
+  "tteryType\030) \001(\005\022\024\n\014isOutOfLimit\030* \001(\005\022\036\n"
+  "\026isGoHomeHeightModified\030+ \001(\005\022\033\n\023isPrope"
+  "llerCatapult\030, \001(\005\022\026\n\016isMotorBlocked\030- \001"
+  "(\005\022\030\n\020isNotEnoughForce\030. \001(\005\022\034\n\024isBarome"
+  "terDeadInAir\030/ \001(\005\022\023\n\013isVibrating\0300 \001(\005\022"
+  "\034\n\024isAcceletorOverRange\0301 \001(\005\022\023\n\013flighAc"
+  "tion\0302 \001(\005\022\035\n\025motorStartFailedCause\0303 \001("
+  "\005\022\023\n\013nonGpsCause\0304 \001(\005\022\031\n\021waypointLimitM"
+  "ode\0305 \001(\005\022\017\n\007battery\0306 \001(\005\022\027\n\017motorRevol"
+  "ution\0307 \001(\005\022\031\n\021ImuInitFailReason\0308 \001(\005\022\022"
+  "\n\nctrlDevice\0309 \001(\005*\267\003\n\nFlightMode\022\n\n\006Man"
+  "ual\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013\n\007G"
+  "PSAtti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHomeLo"
+  "ck\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTakeoff"
+  "\020\n\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022\017\n\013"
+  "GPSWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick\020\021\022"
+  "\024\n\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GPSFo"
+  "llowMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033\022\014\n"
+  "\010GPSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016ConfirmLan"
+  "ding\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&\022\030\n"
+  "\024ActiveTrackSpotlight\020\'\022\025\n\021MotorsJustSta"
+  "rted\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006pro"
+  "to3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps[1] = {
   &::descriptor_table_Common_2fFRCommonModelProto_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto = {
-    false, false, 2801, descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto,
+    false, false, 3443, descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto,
     "FlightController/FRFlightControllerModelProto.proto",
     &descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_once, descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps, 1, 9,
     schemas, file_default_instances, TableStruct_FlightController_2fFRFlightControllerModelProto_2eproto::offsets,
@@ -1376,6 +1446,33 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     , decltype(_impl_.flighttimeinseconds_){}
     , decltype(_impl_.cumulativeflightdistance_){}
     , decltype(_impl_.vpsheight_){}
+    , decltype(_impl_.flyccommand_){}
+    , decltype(_impl_.caniocwork_){}
+    , decltype(_impl_.isswavework_){}
+    , decltype(_impl_.gohomestatus_){}
+    , decltype(_impl_.isvisionused_){}
+    , decltype(_impl_.batterywarning_){}
+    , decltype(_impl_.isimupreheated_){}
+    , decltype(_impl_.modechannel_){}
+    , decltype(_impl_.iscompasserror_){}
+    , decltype(_impl_.waveerror_){}
+    , decltype(_impl_.batterytype_){}
+    , decltype(_impl_.isoutoflimit_){}
+    , decltype(_impl_.isgohomeheightmodified_){}
+    , decltype(_impl_.ispropellercatapult_){}
+    , decltype(_impl_.ismotorblocked_){}
+    , decltype(_impl_.isnotenoughforce_){}
+    , decltype(_impl_.isbarometerdeadinair_){}
+    , decltype(_impl_.isvibrating_){}
+    , decltype(_impl_.isacceletoroverrange_){}
+    , decltype(_impl_.flighaction_){}
+    , decltype(_impl_.motorstartfailedcause_){}
+    , decltype(_impl_.nongpscause_){}
+    , decltype(_impl_.waypointlimitmode_){}
+    , decltype(_impl_.battery_){}
+    , decltype(_impl_.motorrevolution_){}
+    , decltype(_impl_.imuinitfailreason_){}
+    , decltype(_impl_.ctrldevice_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1395,8 +1492,8 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     _this->_impl_.velocity_ = new ::DJIFRProto::Standard::Velocity(*from._impl_.velocity_);
   }
   ::memcpy(&_impl_.takeofflocationaltitude_, &from._impl_.takeofflocationaltitude_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.vpsheight_) -
-    reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.vpsheight_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.ctrldevice_) -
+    reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.ctrldevice_));
   // @@protoc_insertion_point(copy_constructor:DJIFRProto.Standard.FlightControllerState)
 }
 
@@ -1435,6 +1532,33 @@ inline void FlightControllerState::SharedCtor(
     , decltype(_impl_.flighttimeinseconds_){0}
     , decltype(_impl_.cumulativeflightdistance_){0}
     , decltype(_impl_.vpsheight_){0}
+    , decltype(_impl_.flyccommand_){0}
+    , decltype(_impl_.caniocwork_){0}
+    , decltype(_impl_.isswavework_){0}
+    , decltype(_impl_.gohomestatus_){0}
+    , decltype(_impl_.isvisionused_){0}
+    , decltype(_impl_.batterywarning_){0}
+    , decltype(_impl_.isimupreheated_){0}
+    , decltype(_impl_.modechannel_){0}
+    , decltype(_impl_.iscompasserror_){0}
+    , decltype(_impl_.waveerror_){0}
+    , decltype(_impl_.batterytype_){0}
+    , decltype(_impl_.isoutoflimit_){0}
+    , decltype(_impl_.isgohomeheightmodified_){0}
+    , decltype(_impl_.ispropellercatapult_){0}
+    , decltype(_impl_.ismotorblocked_){0}
+    , decltype(_impl_.isnotenoughforce_){0}
+    , decltype(_impl_.isbarometerdeadinair_){0}
+    , decltype(_impl_.isvibrating_){0}
+    , decltype(_impl_.isacceletoroverrange_){0}
+    , decltype(_impl_.flighaction_){0}
+    , decltype(_impl_.motorstartfailedcause_){0}
+    , decltype(_impl_.nongpscause_){0}
+    , decltype(_impl_.waypointlimitmode_){0}
+    , decltype(_impl_.battery_){0}
+    , decltype(_impl_.motorrevolution_){0}
+    , decltype(_impl_.imuinitfailreason_){0}
+    , decltype(_impl_.ctrldevice_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1488,8 +1612,8 @@ void FlightControllerState::Clear() {
   }
   _impl_.velocity_ = nullptr;
   ::memset(&_impl_.takeofflocationaltitude_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.vpsheight_) -
-      reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.vpsheight_));
+      reinterpret_cast<char*>(&_impl_.ctrldevice_) -
+      reinterpret_cast<char*>(&_impl_.takeofflocationaltitude_)) + sizeof(_impl_.ctrldevice_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1744,6 +1868,222 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
+      // int32 flyCCommand = 31;
+      case 31:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 248)) {
+          _impl_.flyccommand_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 canIocWork = 32;
+      case 32:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
+          _impl_.caniocwork_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isSwaveWork = 33;
+      case 33:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.isswavework_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 GoHomeStatus = 34;
+      case 34:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.gohomestatus_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isVisionUsed = 35;
+      case 35:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.isvisionused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 batteryWarning = 36;
+      case 36:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.batterywarning_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isImuPreheated = 37;
+      case 37:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.isimupreheated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 modeChannel = 38;
+      case 38:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.modechannel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isCompassError = 39;
+      case 39:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.iscompasserror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 waveError = 40;
+      case 40:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.waveerror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 batteryType = 41;
+      case 41:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _impl_.batterytype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isOutOfLimit = 42;
+      case 42:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _impl_.isoutoflimit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isGoHomeHeightModified = 43;
+      case 43:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          _impl_.isgohomeheightmodified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isPropellerCatapult = 44;
+      case 44:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _impl_.ispropellercatapult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isMotorBlocked = 45;
+      case 45:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _impl_.ismotorblocked_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isNotEnoughForce = 46;
+      case 46:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          _impl_.isnotenoughforce_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isBarometerDeadInAir = 47;
+      case 47:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _impl_.isbarometerdeadinair_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isVibrating = 48;
+      case 48:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
+          _impl_.isvibrating_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 isAcceletorOverRange = 49;
+      case 49:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
+          _impl_.isacceletoroverrange_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 flighAction = 50;
+      case 50:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
+          _impl_.flighaction_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 motorStartFailedCause = 51;
+      case 51:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
+          _impl_.motorstartfailedcause_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 nonGpsCause = 52;
+      case 52:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
+          _impl_.nongpscause_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 waypointLimitMode = 53;
+      case 53:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
+          _impl_.waypointlimitmode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 battery = 54;
+      case 54:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
+          _impl_.battery_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 motorRevolution = 55;
+      case 55:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 184)) {
+          _impl_.motorrevolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 ImuInitFailReason = 56;
+      case 56:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 192)) {
+          _impl_.imuinitfailreason_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 ctrlDevice = 57;
+      case 57:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 200)) {
+          _impl_.ctrldevice_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -1983,6 +2323,168 @@ uint8_t* FlightControllerState::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteFloatToArray(30, this->_internal_vpsheight(), target);
   }
 
+  // int32 flyCCommand = 31;
+  if (this->_internal_flyccommand() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(31, this->_internal_flyccommand(), target);
+  }
+
+  // int32 canIocWork = 32;
+  if (this->_internal_caniocwork() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(32, this->_internal_caniocwork(), target);
+  }
+
+  // int32 isSwaveWork = 33;
+  if (this->_internal_isswavework() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(33, this->_internal_isswavework(), target);
+  }
+
+  // int32 GoHomeStatus = 34;
+  if (this->_internal_gohomestatus() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(34, this->_internal_gohomestatus(), target);
+  }
+
+  // int32 isVisionUsed = 35;
+  if (this->_internal_isvisionused() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(35, this->_internal_isvisionused(), target);
+  }
+
+  // int32 batteryWarning = 36;
+  if (this->_internal_batterywarning() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(36, this->_internal_batterywarning(), target);
+  }
+
+  // int32 isImuPreheated = 37;
+  if (this->_internal_isimupreheated() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(37, this->_internal_isimupreheated(), target);
+  }
+
+  // int32 modeChannel = 38;
+  if (this->_internal_modechannel() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(38, this->_internal_modechannel(), target);
+  }
+
+  // int32 isCompassError = 39;
+  if (this->_internal_iscompasserror() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(39, this->_internal_iscompasserror(), target);
+  }
+
+  // int32 waveError = 40;
+  if (this->_internal_waveerror() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(40, this->_internal_waveerror(), target);
+  }
+
+  // int32 batteryType = 41;
+  if (this->_internal_batterytype() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(41, this->_internal_batterytype(), target);
+  }
+
+  // int32 isOutOfLimit = 42;
+  if (this->_internal_isoutoflimit() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(42, this->_internal_isoutoflimit(), target);
+  }
+
+  // int32 isGoHomeHeightModified = 43;
+  if (this->_internal_isgohomeheightmodified() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(43, this->_internal_isgohomeheightmodified(), target);
+  }
+
+  // int32 isPropellerCatapult = 44;
+  if (this->_internal_ispropellercatapult() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(44, this->_internal_ispropellercatapult(), target);
+  }
+
+  // int32 isMotorBlocked = 45;
+  if (this->_internal_ismotorblocked() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(45, this->_internal_ismotorblocked(), target);
+  }
+
+  // int32 isNotEnoughForce = 46;
+  if (this->_internal_isnotenoughforce() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(46, this->_internal_isnotenoughforce(), target);
+  }
+
+  // int32 isBarometerDeadInAir = 47;
+  if (this->_internal_isbarometerdeadinair() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(47, this->_internal_isbarometerdeadinair(), target);
+  }
+
+  // int32 isVibrating = 48;
+  if (this->_internal_isvibrating() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(48, this->_internal_isvibrating(), target);
+  }
+
+  // int32 isAcceletorOverRange = 49;
+  if (this->_internal_isacceletoroverrange() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(49, this->_internal_isacceletoroverrange(), target);
+  }
+
+  // int32 flighAction = 50;
+  if (this->_internal_flighaction() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(50, this->_internal_flighaction(), target);
+  }
+
+  // int32 motorStartFailedCause = 51;
+  if (this->_internal_motorstartfailedcause() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(51, this->_internal_motorstartfailedcause(), target);
+  }
+
+  // int32 nonGpsCause = 52;
+  if (this->_internal_nongpscause() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(52, this->_internal_nongpscause(), target);
+  }
+
+  // int32 waypointLimitMode = 53;
+  if (this->_internal_waypointlimitmode() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(53, this->_internal_waypointlimitmode(), target);
+  }
+
+  // int32 battery = 54;
+  if (this->_internal_battery() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(54, this->_internal_battery(), target);
+  }
+
+  // int32 motorRevolution = 55;
+  if (this->_internal_motorrevolution() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(55, this->_internal_motorrevolution(), target);
+  }
+
+  // int32 ImuInitFailReason = 56;
+  if (this->_internal_imuinitfailreason() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(56, this->_internal_imuinitfailreason(), target);
+  }
+
+  // int32 ctrlDevice = 57;
+  if (this->_internal_ctrldevice() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(57, this->_internal_ctrldevice(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2190,6 +2692,195 @@ size_t FlightControllerState::ByteSizeLong() const {
     total_size += 2 + 4;
   }
 
+  // int32 flyCCommand = 31;
+  if (this->_internal_flyccommand() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_flyccommand());
+  }
+
+  // int32 canIocWork = 32;
+  if (this->_internal_caniocwork() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_caniocwork());
+  }
+
+  // int32 isSwaveWork = 33;
+  if (this->_internal_isswavework() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isswavework());
+  }
+
+  // int32 GoHomeStatus = 34;
+  if (this->_internal_gohomestatus() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_gohomestatus());
+  }
+
+  // int32 isVisionUsed = 35;
+  if (this->_internal_isvisionused() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isvisionused());
+  }
+
+  // int32 batteryWarning = 36;
+  if (this->_internal_batterywarning() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_batterywarning());
+  }
+
+  // int32 isImuPreheated = 37;
+  if (this->_internal_isimupreheated() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isimupreheated());
+  }
+
+  // int32 modeChannel = 38;
+  if (this->_internal_modechannel() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_modechannel());
+  }
+
+  // int32 isCompassError = 39;
+  if (this->_internal_iscompasserror() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_iscompasserror());
+  }
+
+  // int32 waveError = 40;
+  if (this->_internal_waveerror() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_waveerror());
+  }
+
+  // int32 batteryType = 41;
+  if (this->_internal_batterytype() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_batterytype());
+  }
+
+  // int32 isOutOfLimit = 42;
+  if (this->_internal_isoutoflimit() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isoutoflimit());
+  }
+
+  // int32 isGoHomeHeightModified = 43;
+  if (this->_internal_isgohomeheightmodified() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isgohomeheightmodified());
+  }
+
+  // int32 isPropellerCatapult = 44;
+  if (this->_internal_ispropellercatapult() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_ispropellercatapult());
+  }
+
+  // int32 isMotorBlocked = 45;
+  if (this->_internal_ismotorblocked() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_ismotorblocked());
+  }
+
+  // int32 isNotEnoughForce = 46;
+  if (this->_internal_isnotenoughforce() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isnotenoughforce());
+  }
+
+  // int32 isBarometerDeadInAir = 47;
+  if (this->_internal_isbarometerdeadinair() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isbarometerdeadinair());
+  }
+
+  // int32 isVibrating = 48;
+  if (this->_internal_isvibrating() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isvibrating());
+  }
+
+  // int32 isAcceletorOverRange = 49;
+  if (this->_internal_isacceletoroverrange() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_isacceletoroverrange());
+  }
+
+  // int32 flighAction = 50;
+  if (this->_internal_flighaction() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_flighaction());
+  }
+
+  // int32 motorStartFailedCause = 51;
+  if (this->_internal_motorstartfailedcause() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_motorstartfailedcause());
+  }
+
+  // int32 nonGpsCause = 52;
+  if (this->_internal_nongpscause() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_nongpscause());
+  }
+
+  // int32 waypointLimitMode = 53;
+  if (this->_internal_waypointlimitmode() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_waypointlimitmode());
+  }
+
+  // int32 battery = 54;
+  if (this->_internal_battery() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_battery());
+  }
+
+  // int32 motorRevolution = 55;
+  if (this->_internal_motorrevolution() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_motorrevolution());
+  }
+
+  // int32 ImuInitFailReason = 56;
+  if (this->_internal_imuinitfailreason() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_imuinitfailreason());
+  }
+
+  // int32 ctrlDevice = 57;
+  if (this->_internal_ctrldevice() != 0) {
+    total_size += 2 +
+      ::_pbi::WireFormatLite::Int32Size(
+        this->_internal_ctrldevice());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -2323,6 +3014,87 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (raw_vpsheight != 0) {
     _this->_internal_set_vpsheight(from._internal_vpsheight());
   }
+  if (from._internal_flyccommand() != 0) {
+    _this->_internal_set_flyccommand(from._internal_flyccommand());
+  }
+  if (from._internal_caniocwork() != 0) {
+    _this->_internal_set_caniocwork(from._internal_caniocwork());
+  }
+  if (from._internal_isswavework() != 0) {
+    _this->_internal_set_isswavework(from._internal_isswavework());
+  }
+  if (from._internal_gohomestatus() != 0) {
+    _this->_internal_set_gohomestatus(from._internal_gohomestatus());
+  }
+  if (from._internal_isvisionused() != 0) {
+    _this->_internal_set_isvisionused(from._internal_isvisionused());
+  }
+  if (from._internal_batterywarning() != 0) {
+    _this->_internal_set_batterywarning(from._internal_batterywarning());
+  }
+  if (from._internal_isimupreheated() != 0) {
+    _this->_internal_set_isimupreheated(from._internal_isimupreheated());
+  }
+  if (from._internal_modechannel() != 0) {
+    _this->_internal_set_modechannel(from._internal_modechannel());
+  }
+  if (from._internal_iscompasserror() != 0) {
+    _this->_internal_set_iscompasserror(from._internal_iscompasserror());
+  }
+  if (from._internal_waveerror() != 0) {
+    _this->_internal_set_waveerror(from._internal_waveerror());
+  }
+  if (from._internal_batterytype() != 0) {
+    _this->_internal_set_batterytype(from._internal_batterytype());
+  }
+  if (from._internal_isoutoflimit() != 0) {
+    _this->_internal_set_isoutoflimit(from._internal_isoutoflimit());
+  }
+  if (from._internal_isgohomeheightmodified() != 0) {
+    _this->_internal_set_isgohomeheightmodified(from._internal_isgohomeheightmodified());
+  }
+  if (from._internal_ispropellercatapult() != 0) {
+    _this->_internal_set_ispropellercatapult(from._internal_ispropellercatapult());
+  }
+  if (from._internal_ismotorblocked() != 0) {
+    _this->_internal_set_ismotorblocked(from._internal_ismotorblocked());
+  }
+  if (from._internal_isnotenoughforce() != 0) {
+    _this->_internal_set_isnotenoughforce(from._internal_isnotenoughforce());
+  }
+  if (from._internal_isbarometerdeadinair() != 0) {
+    _this->_internal_set_isbarometerdeadinair(from._internal_isbarometerdeadinair());
+  }
+  if (from._internal_isvibrating() != 0) {
+    _this->_internal_set_isvibrating(from._internal_isvibrating());
+  }
+  if (from._internal_isacceletoroverrange() != 0) {
+    _this->_internal_set_isacceletoroverrange(from._internal_isacceletoroverrange());
+  }
+  if (from._internal_flighaction() != 0) {
+    _this->_internal_set_flighaction(from._internal_flighaction());
+  }
+  if (from._internal_motorstartfailedcause() != 0) {
+    _this->_internal_set_motorstartfailedcause(from._internal_motorstartfailedcause());
+  }
+  if (from._internal_nongpscause() != 0) {
+    _this->_internal_set_nongpscause(from._internal_nongpscause());
+  }
+  if (from._internal_waypointlimitmode() != 0) {
+    _this->_internal_set_waypointlimitmode(from._internal_waypointlimitmode());
+  }
+  if (from._internal_battery() != 0) {
+    _this->_internal_set_battery(from._internal_battery());
+  }
+  if (from._internal_motorrevolution() != 0) {
+    _this->_internal_set_motorrevolution(from._internal_motorrevolution());
+  }
+  if (from._internal_imuinitfailreason() != 0) {
+    _this->_internal_set_imuinitfailreason(from._internal_imuinitfailreason());
+  }
+  if (from._internal_ctrldevice() != 0) {
+    _this->_internal_set_ctrldevice(from._internal_ctrldevice());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -2341,8 +3113,8 @@ void FlightControllerState::InternalSwap(FlightControllerState* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.vpsheight_)
-      + sizeof(FlightControllerState::_impl_.vpsheight_)
+      PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.ctrldevice_)
+      + sizeof(FlightControllerState::_impl_.ctrldevice_)
       - PROTOBUF_FIELD_OFFSET(FlightControllerState, _impl_.attitude_)>(
           reinterpret_cast<char*>(&_impl_.attitude_),
           reinterpret_cast<char*>(&other->_impl_.attitude_));

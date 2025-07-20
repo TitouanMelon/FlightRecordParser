@@ -57,6 +57,35 @@ static bool FillOSDData(const dji_fc_osd_push& data_source,
     output->set_flightTimeInSeconds(data_source.lastFlightTime * 0.1f);
     
     output->set_isFlying((AircraftPosition)data_source.groundOrSky == AircraftPosition::In_the_air);
+
+    //Custom
+    output->set_flyCCommand(data_source.FcLIaBnHGrIdCPae);
+    output->set_canIocWork(data_source.alXJEnnqKohpOrIv);
+    output->set_isSwaveWork(data_source.FyPwzqNxTELNHBFq);
+    output->set_GoHomeStatus(data_source.BDnRRfEKLIFHPbYk);
+    output->set_isVisionUsed(data_source.owwcYsTwwGyawhTh);
+    output->set_batteryWarning(data_source.batteryWarning);
+    output->set_isImuPreheated(data_source.NTWSdyzVyGjeZytv);
+    output->set_modeChannel(data_source.vxLdBoDOQIKNvesn);
+    output->set_isCompassError(data_source.isCompassError);
+    output->set_waveError(data_source.HJFuZjYdhVqQYybR);
+    output->set_batteryType(data_source.BeqludSZijuZuhVJ);
+    output->set_isOutOfLimit(data_source.FuMAiwCgVLJzMQki);
+    output->set_isGoHomeHeightModified(data_source.MDFMUARFxhpdJtmI);
+    output->set_isPropellerCatapult(data_source.lRLOYosJLeInQfmo);
+    output->set_isMotorBlocked(data_source.dbBvkdKrlcmvZarp);
+    output->set_isNotEnoughForce(data_source.sHDpcOoUTOCyuKeV);
+    output->set_isBarometerDeadInAir(data_source.mOEVFFHhLfbwkMYj);
+    output->set_isVibrating(data_source.zLsFXPLyQrHXFFUf);
+    output->set_isAcceletorOverRange(data_source.SBVtcuthJBEgAhpq);
+    output->set_flighAction(data_source.kRkpOaMocJqXhYiC);
+    output->set_motorStartFailedCause(data_source.wJpEViPlInceBxUJ);
+    output->set_nonGpsCause(data_source.NDZtBUirCTogtANe);
+    output->set_waypointLimitMode(data_source.aklFKRILmiQEdRGR);
+    output->set_battery(data_source.EfrqbiuncIQowIcw);
+    output->set_motorRevolution(data_source.startUpTimes);
+    output->set_ImuInitFailReason(data_source.sXVeYVkmfPPqVmfH);
+    output->set_ctrlDevice(data_source.nXvqtfHDnlzNwKsq);
     
     return true;
 }
