@@ -201,12 +201,12 @@ void SummaryInformationImp::set_maxHorizontalSpeed(float maxHorizontalSpeed) {
     maxHorizontalSpeed_ = maxHorizontalSpeed;
 }
 
-float SummaryInformationImp::maxVirticalSpeed() const {
-    return maxVirticalSpeed_;
+float SummaryInformationImp::maxVerticalSpeed() const {
+    return maxVerticalSpeed_;
 }
 
-void SummaryInformationImp::set_maxVirticalSpeed(float maxVirticalSpeed) {
-    maxVirticalSpeed_ = maxVirticalSpeed;
+void SummaryInformationImp::set_maxVerticalSpeed(float maxVerticalSpeed) {
+    maxVerticalSpeed_ = maxVerticalSpeed;
 }
 
 std::string SummaryInformationImp::uuid() const {

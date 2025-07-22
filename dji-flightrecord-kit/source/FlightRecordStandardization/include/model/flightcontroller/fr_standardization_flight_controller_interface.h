@@ -376,8 +376,8 @@ namespace DJIFR {
             virtual int32_t isNotEnoughForce() const = 0;
             virtual int32_t isBarometerDeadInAir() const = 0;
             virtual int32_t isVibrating() const = 0;
-            virtual int32_t isAcceletorOverRange() const = 0;
-            virtual int32_t flighAction() const = 0;
+            virtual int32_t isAcceleratorOverRange() const = 0;
+            virtual int32_t flightAction() const = 0;
             virtual int32_t motorStartFailedCause() const = 0;
             virtual int32_t nonGpsCause() const = 0;
             virtual int32_t waypointLimitMode() const = 0;

@@ -106,8 +106,8 @@ namespace DJIFR {
             void set_maxHorizontalSpeed(float maxHorizontalSpeed);
             
             /// Maximum vertical speed, in meters per second.
-            float maxVirticalSpeed() const override;
-            void set_maxVirticalSpeed(float maxVirticalSpeed);
+            float maxVerticalSpeed() const override;
+            void set_maxVerticalSpeed(float maxVerticalSpeed);
             
             /// Only one sortie marked
             std::string uuid() const override;
@@ -151,7 +151,7 @@ namespace DJIFR {
             float maxHorizontalSpeed_;
             
             /// Maximum vertical speed, in meters per second.
-            float maxVirticalSpeed_;
+            float maxVerticalSpeed_;
             
             /// Only one sortie marked
             std::string uuid_;

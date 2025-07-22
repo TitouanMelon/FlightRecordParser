@@ -179,7 +179,7 @@ typedef struct{
     int32_t totalTime;
     float maxHeight;
     float maxHorizontalSpeed;
-    float maxVirticalSpeed;
+    float maxVerticalSpeed;
     int32_t captureNum;
     int64_t videoTime;
     int32_t momentPicImageBufferLen[MomentPicNum];
@@ -258,11 +258,11 @@ typedef struct
     uint8_t sHDpcOoUTOCyuKeV        :1; // isNotEnoughForce
     uint8_t mOEVFFHhLfbwkMYj        :1; // isBarometerDeadInAir
     uint8_t zLsFXPLyQrHXFFUf:1; // isVibrating
-    uint8_t SBVtcuthJBEgAhpq  :1; // isAcceletorOverRange
+    uint8_t SBVtcuthJBEgAhpq  :1; // isAcceleratorOverRange
     
     uint8_t gps_num;
 
-    uint8_t kRkpOaMocJqXhYiC; // flighAction
+    uint8_t kRkpOaMocJqXhYiC; // flightAction
 
     uint8_t wJpEViPlInceBxUJ:7; // motorStartFailedCause
     uint8_t sfLKJziSEyBkGWYo:1; // ??

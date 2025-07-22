@@ -90,7 +90,7 @@ PROTOBUF_CONSTEXPR SummaryInformation::SummaryInformation(
   , /*decltype(_impl_.samplingrate_)*/0
   , /*decltype(_impl_.maxheight_)*/0
   , /*decltype(_impl_.maxhorizontalspeed_)*/0
-  , /*decltype(_impl_.maxvirticalspeed_)*/0
+  , /*decltype(_impl_.maxverticalspeed_)*/0
   , /*decltype(_impl_.producttype_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SummaryInformationDefaultTypeInternal {
@@ -169,7 +169,7 @@ const uint32_t TableStruct_Summary_2fFRSummaryModelProto_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.samplingrate_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.maxheight_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.maxhorizontalspeed_),
-  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.maxvirticalspeed_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.maxverticalspeed_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.uuid_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::SummaryInformation, _impl_.producttype_),
 };
@@ -213,7 +213,7 @@ const char descriptor_table_protodef_Summary_2fFRSummaryModelProto_2eproto[] PRO
   "IFRProto.Standard.LocationCoordinate2D\022\025"
   "\n\rtotalDistance\030\014 \001(\002\022\021\n\ttotalTime\030\r \001(\001"
   "\022\024\n\014samplingRate\030\016 \001(\005\022\021\n\tmaxHeight\030\017 \001("
-  "\002\022\032\n\022maxHorizontalSpeed\030\020 \001(\002\022\030\n\020maxVirt"
+  "\002\022\032\n\022maxHorizontalSpeed\030\020 \001(\002\022\030\n\020maxVert"
   "icalSpeed\030\021 \001(\002\022\014\n\004uuid\030\022 \001(\t\0229\n\013product"
   "Type\030\023 \001(\0162$.DJIFRProto.Standard.SDK.Pro"
   "ductType\032f\n\031BatteriesInformationEntry\022\013\n"
@@ -647,7 +647,7 @@ SummaryInformation::SummaryInformation(const SummaryInformation& from)
     , decltype(_impl_.samplingrate_){}
     , decltype(_impl_.maxheight_){}
     , decltype(_impl_.maxhorizontalspeed_){}
-    , decltype(_impl_.maxvirticalspeed_){}
+    , decltype(_impl_.maxverticalspeed_){}
     , decltype(_impl_.producttype_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -708,7 +708,7 @@ inline void SummaryInformation::SharedCtor(
     , decltype(_impl_.samplingrate_){0}
     , decltype(_impl_.maxheight_){0}
     , decltype(_impl_.maxhorizontalspeed_){0}
-    , decltype(_impl_.maxvirticalspeed_){0}
+    , decltype(_impl_.maxverticalspeed_){0}
     , decltype(_impl_.producttype_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
@@ -935,10 +935,10 @@ const char* SummaryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // float maxVirticalSpeed = 17;
+      // float maxVerticalSpeed = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 141)) {
-          _impl_.maxvirticalspeed_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          _impl_.maxverticalspeed_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
@@ -1145,14 +1145,14 @@ uint8_t* SummaryInformation::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteFloatToArray(16, this->_internal_maxhorizontalspeed(), target);
   }
 
-  // float maxVirticalSpeed = 17;
+  // float maxVerticalSpeed = 17;
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_maxvirticalspeed = this->_internal_maxvirticalspeed();
-  uint32_t raw_maxvirticalspeed;
-  memcpy(&raw_maxvirticalspeed, &tmp_maxvirticalspeed, sizeof(tmp_maxvirticalspeed));
-  if (raw_maxvirticalspeed != 0) {
+  float tmp_maxverticalspeed = this->_internal_maxverticalspeed();
+  uint32_t raw_maxverticalspeed;
+  memcpy(&raw_maxverticalspeed, &tmp_maxverticalspeed, sizeof(tmp_maxverticalspeed));
+  if (raw_maxverticalspeed != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(17, this->_internal_maxvirticalspeed(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(17, this->_internal_maxverticalspeed(), target);
   }
 
   // string uuid = 18;
@@ -1320,12 +1320,12 @@ size_t SummaryInformation::ByteSizeLong() const {
     total_size += 2 + 4;
   }
 
-  // float maxVirticalSpeed = 17;
+  // float maxVerticalSpeed = 17;
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_maxvirticalspeed = this->_internal_maxvirticalspeed();
-  uint32_t raw_maxvirticalspeed;
-  memcpy(&raw_maxvirticalspeed, &tmp_maxvirticalspeed, sizeof(tmp_maxvirticalspeed));
-  if (raw_maxvirticalspeed != 0) {
+  float tmp_maxverticalspeed = this->_internal_maxverticalspeed();
+  uint32_t raw_maxverticalspeed;
+  memcpy(&raw_maxverticalspeed, &tmp_maxverticalspeed, sizeof(tmp_maxverticalspeed));
+  if (raw_maxverticalspeed != 0) {
     total_size += 2 + 4;
   }
 
@@ -1417,11 +1417,11 @@ void SummaryInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
     _this->_internal_set_maxhorizontalspeed(from._internal_maxhorizontalspeed());
   }
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_maxvirticalspeed = from._internal_maxvirticalspeed();
-  uint32_t raw_maxvirticalspeed;
-  memcpy(&raw_maxvirticalspeed, &tmp_maxvirticalspeed, sizeof(tmp_maxvirticalspeed));
-  if (raw_maxvirticalspeed != 0) {
-    _this->_internal_set_maxvirticalspeed(from._internal_maxvirticalspeed());
+  float tmp_maxverticalspeed = from._internal_maxverticalspeed();
+  uint32_t raw_maxverticalspeed;
+  memcpy(&raw_maxverticalspeed, &tmp_maxverticalspeed, sizeof(tmp_maxverticalspeed));
+  if (raw_maxverticalspeed != 0) {
+    _this->_internal_set_maxverticalspeed(from._internal_maxverticalspeed());
   }
   if (from._internal_producttype() != 0) {
     _this->_internal_set_producttype(from._internal_producttype());

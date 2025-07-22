@@ -327,8 +327,8 @@ message FlightControllerState {
     int32 isNotEnoughForce = 46;
     int32 isBarometerDeadInAir = 47;
     int32 isVibrating = 48;
-    int32 isAcceletorOverRange = 49;
-    int32 flighAction = 50;
+    int32 isAcceleratorOverRange = 49;
+    int32 flightAction = 50;
     int32 motorStartFailedCause = 51;
     int32 nonGpsCause = 52;
     int32 waypointLimitMode = 53;

@@ -50,7 +50,7 @@ message SummaryInformation {
     /// Maximum horizontal speed, in meters per second.
     float maxHorizontalSpeed = 16;
     /// Maximum vertical speed, in meters per second.
-    float maxVirticalSpeed = 17;
+    float maxVerticalSpeed = 17;
     /// Only one sortie marked
     string uuid = 18;
     /// Only one sortie marked

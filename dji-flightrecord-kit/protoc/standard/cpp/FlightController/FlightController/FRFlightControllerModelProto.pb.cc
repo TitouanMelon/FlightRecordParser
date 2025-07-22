@@ -169,8 +169,8 @@ PROTOBUF_CONSTEXPR FlightControllerState::FlightControllerState(
   , /*decltype(_impl_.isnotenoughforce_)*/0
   , /*decltype(_impl_.isbarometerdeadinair_)*/0
   , /*decltype(_impl_.isvibrating_)*/0
-  , /*decltype(_impl_.isacceletoroverrange_)*/0
-  , /*decltype(_impl_.flighaction_)*/0
+  , /*decltype(_impl_.isacceleratoroverrange_)*/0
+  , /*decltype(_impl_.flightaction_)*/0
   , /*decltype(_impl_.motorstartfailedcause_)*/0
   , /*decltype(_impl_.nongpscause_)*/0
   , /*decltype(_impl_.waypointlimitmode_)*/0
@@ -305,8 +305,8 @@ const uint32_t TableStruct_FlightController_2fFRFlightControllerModelProto_2epro
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isnotenoughforce_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isbarometerdeadinair_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isvibrating_),
-  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isacceletoroverrange_),
-  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flighaction_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.isacceleratoroverrange_),
+  PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.flightaction_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.motorstartfailedcause_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.nongpscause_),
   PROTOBUF_FIELD_OFFSET(::DJIFRProto::Standard::FlightControllerState, _impl_.waypointlimitmode_),
@@ -367,7 +367,7 @@ const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelP
   ".DJIFRProto.Standard.VirtualStickYawCont"
   "rol.Mode\022[\n\031rollPitchCoordinateSystem\030\010 "
   "\001(\01628.DJIFRProto.Standard.VirtualStickFl"
-  "ightCoordinate.System\"\322\016\n\025FlightControll"
+  "ightCoordinate.System\"\325\016\n\025FlightControll"
   "erState\022/\n\010attitude\030\001 \001(\0132\035.DJIFRProto.S"
   "tandard.Attitude\022I\n\026homeLocationCoordina"
   "te\030\002 \001(\0132).DJIFRProto.Standard.LocationC"
@@ -409,31 +409,31 @@ const char descriptor_table_protodef_FlightController_2fFRFlightControllerModelP
   "llerCatapult\030, \001(\005\022\026\n\016isMotorBlocked\030- \001"
   "(\005\022\030\n\020isNotEnoughForce\030. \001(\005\022\034\n\024isBarome"
   "terDeadInAir\030/ \001(\005\022\023\n\013isVibrating\0300 \001(\005\022"
-  "\034\n\024isAcceletorOverRange\0301 \001(\005\022\023\n\013flighAc"
-  "tion\0302 \001(\005\022\035\n\025motorStartFailedCause\0303 \001("
-  "\005\022\023\n\013nonGpsCause\0304 \001(\005\022\031\n\021waypointLimitM"
-  "ode\0305 \001(\005\022\017\n\007battery\0306 \001(\005\022\027\n\017motorRevol"
-  "ution\0307 \001(\005\022\031\n\021ImuInitFailReason\0308 \001(\005\022\022"
-  "\n\nctrlDevice\0309 \001(\005*\267\003\n\nFlightMode\022\n\n\006Man"
-  "ual\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013\n\007G"
-  "PSAtti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHomeLo"
-  "ck\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTakeoff"
-  "\020\n\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022\017\n\013"
-  "GPSWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick\020\021\022"
-  "\024\n\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GPSFo"
-  "llowMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033\022\014\n"
-  "\010GPSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016ConfirmLan"
-  "ding\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&\022\030\n"
-  "\024ActiveTrackSpotlight\020\'\022\025\n\021MotorsJustSta"
-  "rted\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006pro"
-  "to3"
+  "\036\n\026isAcceleratorOverRange\0301 \001(\005\022\024\n\014fligh"
+  "tAction\0302 \001(\005\022\035\n\025motorStartFailedCause\0303"
+  " \001(\005\022\023\n\013nonGpsCause\0304 \001(\005\022\031\n\021waypointLim"
+  "itMode\0305 \001(\005\022\017\n\007battery\0306 \001(\005\022\027\n\017motorRe"
+  "volution\0307 \001(\005\022\031\n\021ImuInitFailReason\0308 \001("
+  "\005\022\022\n\nctrlDevice\0309 \001(\005*\267\003\n\nFlightMode\022\n\n\006"
+  "Manual\020\000\022\010\n\004Atti\020\001\022\022\n\016AttiCourseLock\020\002\022\013"
+  "\n\007GPSAtti\020\006\022\021\n\rGPSCourseLock\020\007\022\017\n\013GPSHom"
+  "eLock\020\010\022\017\n\013GPSHotPoint\020\t\022\023\n\017AssistedTake"
+  "off\020\n\022\017\n\013AutoTakeoff\020\013\022\017\n\013AutoLanding\020\014\022"
+  "\017\n\013GPSWaypoint\020\016\022\n\n\006GoHome\020\017\022\014\n\010Joystick"
+  "\020\021\022\024\n\020GPSAttiWristband\020\022\022\010\n\004Draw\020\030\022\017\n\013GP"
+  "SFollowMe\020\031\022\017\n\013ActiveTrack\020\032\022\n\n\006TapFly\020\033"
+  "\022\014\n\010GPSSport\020\037\022\r\n\tGPSNovice\020 \022\022\n\016Confirm"
+  "Landing\020!\022\021\n\rTerrainFollow\020#\022\n\n\006Tripod\020&"
+  "\022\030\n\024ActiveTrackSpotlight\020\'\022\025\n\021MotorsJust"
+  "Started\020)\022\014\n\007Unknown\020\377\001B\r\242\002\nDJIFRProtob\006"
+  "proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps[1] = {
   &::descriptor_table_Common_2fFRCommonModelProto_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto = {
-    false, false, 3443, descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto,
+    false, false, 3446, descriptor_table_protodef_FlightController_2fFRFlightControllerModelProto_2eproto,
     "FlightController/FRFlightControllerModelProto.proto",
     &descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_once, descriptor_table_FlightController_2fFRFlightControllerModelProto_2eproto_deps, 1, 9,
     schemas, file_default_instances, TableStruct_FlightController_2fFRFlightControllerModelProto_2eproto::offsets,
@@ -1464,8 +1464,8 @@ FlightControllerState::FlightControllerState(const FlightControllerState& from)
     , decltype(_impl_.isnotenoughforce_){}
     , decltype(_impl_.isbarometerdeadinair_){}
     , decltype(_impl_.isvibrating_){}
-    , decltype(_impl_.isacceletoroverrange_){}
-    , decltype(_impl_.flighaction_){}
+    , decltype(_impl_.isacceleratoroverrange_){}
+    , decltype(_impl_.flightaction_){}
     , decltype(_impl_.motorstartfailedcause_){}
     , decltype(_impl_.nongpscause_){}
     , decltype(_impl_.waypointlimitmode_){}
@@ -1550,8 +1550,8 @@ inline void FlightControllerState::SharedCtor(
     , decltype(_impl_.isnotenoughforce_){0}
     , decltype(_impl_.isbarometerdeadinair_){0}
     , decltype(_impl_.isvibrating_){0}
-    , decltype(_impl_.isacceletoroverrange_){0}
-    , decltype(_impl_.flighaction_){0}
+    , decltype(_impl_.isacceleratoroverrange_){0}
+    , decltype(_impl_.flightaction_){0}
     , decltype(_impl_.motorstartfailedcause_){0}
     , decltype(_impl_.nongpscause_){0}
     , decltype(_impl_.waypointlimitmode_){0}
@@ -2012,18 +2012,18 @@ const char* FlightControllerState::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // int32 isAcceletorOverRange = 49;
+      // int32 isAcceleratorOverRange = 49;
       case 49:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
-          _impl_.isacceletoroverrange_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.isacceleratoroverrange_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 flighAction = 50;
+      // int32 flightAction = 50;
       case 50:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
-          _impl_.flighaction_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.flightaction_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2431,16 +2431,16 @@ uint8_t* FlightControllerState::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(48, this->_internal_isvibrating(), target);
   }
 
-  // int32 isAcceletorOverRange = 49;
-  if (this->_internal_isacceletoroverrange() != 0) {
+  // int32 isAcceleratorOverRange = 49;
+  if (this->_internal_isacceleratoroverrange() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(49, this->_internal_isacceletoroverrange(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(49, this->_internal_isacceleratoroverrange(), target);
   }
 
-  // int32 flighAction = 50;
-  if (this->_internal_flighaction() != 0) {
+  // int32 flightAction = 50;
+  if (this->_internal_flightaction() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(50, this->_internal_flighaction(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(50, this->_internal_flightaction(), target);
   }
 
   // int32 motorStartFailedCause = 51;
@@ -2818,18 +2818,18 @@ size_t FlightControllerState::ByteSizeLong() const {
         this->_internal_isvibrating());
   }
 
-  // int32 isAcceletorOverRange = 49;
-  if (this->_internal_isacceletoroverrange() != 0) {
+  // int32 isAcceleratorOverRange = 49;
+  if (this->_internal_isacceleratoroverrange() != 0) {
     total_size += 2 +
       ::_pbi::WireFormatLite::Int32Size(
-        this->_internal_isacceletoroverrange());
+        this->_internal_isacceleratoroverrange());
   }
 
-  // int32 flighAction = 50;
-  if (this->_internal_flighaction() != 0) {
+  // int32 flightAction = 50;
+  if (this->_internal_flightaction() != 0) {
     total_size += 2 +
       ::_pbi::WireFormatLite::Int32Size(
-        this->_internal_flighaction());
+        this->_internal_flightaction());
   }
 
   // int32 motorStartFailedCause = 51;
@@ -3068,11 +3068,11 @@ void FlightControllerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (from._internal_isvibrating() != 0) {
     _this->_internal_set_isvibrating(from._internal_isvibrating());
   }
-  if (from._internal_isacceletoroverrange() != 0) {
-    _this->_internal_set_isacceletoroverrange(from._internal_isacceletoroverrange());
+  if (from._internal_isacceleratoroverrange() != 0) {
+    _this->_internal_set_isacceleratoroverrange(from._internal_isacceleratoroverrange());
   }
-  if (from._internal_flighaction() != 0) {
-    _this->_internal_set_flighaction(from._internal_flighaction());
+  if (from._internal_flightaction() != 0) {
+    _this->_internal_set_flightaction(from._internal_flightaction());
   }
   if (from._internal_motorstartfailedcause() != 0) {
     _this->_internal_set_motorstartfailedcause(from._internal_motorstartfailedcause());

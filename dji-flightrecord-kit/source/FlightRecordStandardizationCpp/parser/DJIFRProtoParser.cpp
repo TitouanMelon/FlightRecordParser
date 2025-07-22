@@ -314,8 +314,8 @@ static FlightControllerState ConvertToFlightControllerState(DJIFR::standardizati
     flightControllerState.set_isnotenoughforce(flightController_cpp->isNotEnoughForce());
     flightControllerState.set_isbarometerdeadinair(flightController_cpp->isBarometerDeadInAir());
     flightControllerState.set_isvibrating(flightController_cpp->isVibrating());
-    flightControllerState.set_isacceletoroverrange(flightController_cpp->isAcceletorOverRange());
-    flightControllerState.set_flighaction(flightController_cpp->flighAction());
+    flightControllerState.set_isacceleratoroverrange(flightController_cpp->isAcceleratorOverRange());
+    flightControllerState.set_flightaction(flightController_cpp->flightAction());
     flightControllerState.set_motorstartfailedcause(flightController_cpp->motorStartFailedCause());
     flightControllerState.set_nongpscause(flightController_cpp->nonGpsCause());
     flightControllerState.set_waypointlimitmode(flightController_cpp->waypointLimitMode());
@@ -589,7 +589,7 @@ FRError Parser::summaryInformation(std::shared_ptr<SummaryInformation> *output) 
     summary->set_samplingrate(summary_cpp->samplingRate());
     summary->set_maxheight(summary_cpp->maxHeight());
     summary->set_maxhorizontalspeed(summary_cpp->maxHorizontalSpeed());
-    summary->set_maxvirticalspeed(summary_cpp->maxVirticalSpeed());
+    summary->set_maxverticalspeed(summary_cpp->maxVerticalSpeed());
     summary->set_uuid(summary_cpp->uuid());
     summary->set_producttype((SDK_ProductType)summary_cpp->product_type());
     

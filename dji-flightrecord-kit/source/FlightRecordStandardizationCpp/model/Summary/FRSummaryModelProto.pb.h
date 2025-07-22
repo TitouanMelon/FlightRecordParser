@@ -545,7 +545,7 @@ class SummaryInformation final :
     kSamplingRateFieldNumber = 14,
     kMaxHeightFieldNumber = 15,
     kMaxHorizontalSpeedFieldNumber = 16,
-    kMaxVirticalSpeedFieldNumber = 17,
+    kMaxVerticalSpeedFieldNumber = 17,
     kProductTypeFieldNumber = 19,
   };
   // repeated int32 appVersion = 2;
@@ -766,13 +766,13 @@ class SummaryInformation final :
   void _internal_set_maxhorizontalspeed(float value);
   public:
 
-  // float maxVirticalSpeed = 17;
-  void clear_maxvirticalspeed();
-  float maxvirticalspeed() const;
-  void set_maxvirticalspeed(float value);
+  // float maxVerticalSpeed = 17;
+  void clear_maxverticalspeed();
+  float maxverticalspeed() const;
+  void set_maxverticalspeed(float value);
   private:
-  float _internal_maxvirticalspeed() const;
-  void _internal_set_maxvirticalspeed(float value);
+  float _internal_maxverticalspeed() const;
+  void _internal_set_maxverticalspeed(float value);
   public:
 
   // .DJIFRProto.Standard.SDK.ProductType productType = 19;
@@ -821,7 +821,7 @@ class SummaryInformation final :
     int32_t samplingrate_;
     float maxheight_;
     float maxhorizontalspeed_;
-    float maxvirticalspeed_;
+    float maxverticalspeed_;
     int producttype_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1555,24 +1555,24 @@ inline void SummaryInformation::set_maxhorizontalspeed(float value) {
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.SummaryInformation.maxHorizontalSpeed)
 }
 
-// float maxVirticalSpeed = 17;
-inline void SummaryInformation::clear_maxvirticalspeed() {
-  _impl_.maxvirticalspeed_ = 0;
+// float maxVerticalSpeed = 17;
+inline void SummaryInformation::clear_maxverticalspeed() {
+  _impl_.maxverticalspeed_ = 0;
 }
-inline float SummaryInformation::_internal_maxvirticalspeed() const {
-  return _impl_.maxvirticalspeed_;
+inline float SummaryInformation::_internal_maxverticalspeed() const {
+  return _impl_.maxverticalspeed_;
 }
-inline float SummaryInformation::maxvirticalspeed() const {
-  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.SummaryInformation.maxVirticalSpeed)
-  return _internal_maxvirticalspeed();
+inline float SummaryInformation::maxverticalspeed() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.SummaryInformation.maxVerticalSpeed)
+  return _internal_maxverticalspeed();
 }
-inline void SummaryInformation::_internal_set_maxvirticalspeed(float value) {
+inline void SummaryInformation::_internal_set_maxverticalspeed(float value) {
   
-  _impl_.maxvirticalspeed_ = value;
+  _impl_.maxverticalspeed_ = value;
 }
-inline void SummaryInformation::set_maxvirticalspeed(float value) {
-  _internal_set_maxvirticalspeed(value);
-  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.SummaryInformation.maxVirticalSpeed)
+inline void SummaryInformation::set_maxverticalspeed(float value) {
+  _internal_set_maxverticalspeed(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.SummaryInformation.maxVerticalSpeed)
 }
 
 // string uuid = 18;

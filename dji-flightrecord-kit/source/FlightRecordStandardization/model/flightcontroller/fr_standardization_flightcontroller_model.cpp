@@ -139,8 +139,8 @@ isMotorBlocked_(0),
 isNotEnoughForce_(0),
 isBarometerDeadInAir_(0),
 isVibrating_(0),
-isAcceletorOverRange_(0),
-flighAction_(0),
+isAcceleratorOverRange_(0),
+flightAction_(0),
 motorStartFailedCause_(0),
 nonGpsCause_(0),
 waypointLimitMode_(0),
@@ -543,18 +543,18 @@ void FlightControllerStateImp::set_isVibrating(int isVibrating) {
 	isVibrating_ = isVibrating;
 }
 
-int32_t FlightControllerStateImp::isAcceletorOverRange() const {
-	return isAcceletorOverRange_;
+int32_t FlightControllerStateImp::isAcceleratorOverRange() const {
+	return isAcceleratorOverRange_;
 }
-void FlightControllerStateImp::set_isAcceletorOverRange(int isAcceletorOverRange) {
-	isAcceletorOverRange_ = isAcceletorOverRange;
+void FlightControllerStateImp::set_isAcceleratorOverRange(int isAcceleratorOverRange) {
+	isAcceleratorOverRange_ = isAcceleratorOverRange;
 }
 
-int32_t FlightControllerStateImp::flighAction() const {
-	return flighAction_;
+int32_t FlightControllerStateImp::flightAction() const {
+	return flightAction_;
 }
-void FlightControllerStateImp::set_flighAction(int flighAction) {
-	flighAction_ = flighAction;
+void FlightControllerStateImp::set_flightAction(int flightAction) {
+	flightAction_ = flightAction;
 }
 
 int32_t FlightControllerStateImp::motorStartFailedCause() const {

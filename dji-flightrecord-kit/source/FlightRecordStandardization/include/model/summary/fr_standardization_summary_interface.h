@@ -85,7 +85,7 @@ namespace DJIFR {
             virtual float maxHorizontalSpeed() const = 0;
             
             /// Maximum vertical speed, in meters per second.
-            virtual float maxVirticalSpeed() const = 0;
+            virtual float maxVerticalSpeed() const = 0;
             
             /// Only one sortie marked
             virtual std::string uuid() const = 0;

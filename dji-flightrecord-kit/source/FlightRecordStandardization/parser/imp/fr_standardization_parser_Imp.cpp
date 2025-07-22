@@ -644,7 +644,7 @@ SDKError ParserImp::parserSummary() {
     // fill max data
     summary_info_->set_maxHeight(info.maxHeight);
     summary_info_->set_maxHorizontalSpeed(info.maxHorizontalSpeed);
-    summary_info_->set_maxVirticalSpeed(info.maxVirticalSpeed);
+    summary_info_->set_maxVerticalSpeed(info.maxVerticalSpeed);
     
     auto uuid_len = sizeof(info.uuid);
     if (isValidContent(info.uuid, uuid_len)) {
@@ -831,8 +831,8 @@ void ParserImp::recalculateSummary() {
         summary_info_->set_maxHorizontalSpeed(0);
     }
     
-    if (summary_info_->maxVirticalSpeed() < 0) {
-        summary_info_->set_maxVirticalSpeed(0);
+    if (summary_info_->maxVerticalSpeed() < 0) {
+        summary_info_->set_maxVerticalSpeed(0);
     }
     
     size_t frame_time_list_len = frame_time_list_.size();
@@ -874,8 +874,8 @@ void ParserImp::recalculateSummary() {
             summary_info_->set_maxHeight(fc->altitude());
         }
         
-        if (fc->velocity()->velocityZ() > summary_info_->maxVirticalSpeed()) {
-            summary_info_->set_maxVirticalSpeed(fc->velocity()->velocityZ());
+        if (fc->velocity()->velocityZ() > summary_info_->maxVerticalSpeed()) {
+            summary_info_->set_maxVerticalSpeed(fc->velocity()->velocityZ());
         }
         
         auto new_horizonal_speed = sqrt(pow(fc->velocity()->velocityX(), 2) + pow(fc->velocity()->velocityY(), 2));

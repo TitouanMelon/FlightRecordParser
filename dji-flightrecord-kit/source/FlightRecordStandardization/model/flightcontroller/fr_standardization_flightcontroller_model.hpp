@@ -292,11 +292,11 @@ namespace DJIFR {
             int32_t isVibrating() const;
             void set_isVibrating(int isVibrating);
 
-            int32_t isAcceletorOverRange() const;
-            void set_isAcceletorOverRange(int isAcceletorOverRange);
+            int32_t isAcceleratorOverRange() const;
+            void set_isAcceleratorOverRange(int isAcceleratorOverRange);
 
-            int32_t flighAction() const;
-            void set_flighAction(int flighAction);
+            int32_t flightAction() const;
+            void set_flightAction(int flightAction);
 
             int32_t motorStartFailedCause() const;
             void set_motorStartFailedCause(int motorStartFailedCause);
@@ -404,8 +404,8 @@ namespace DJIFR {
             int32_t isNotEnoughForce_;
             int32_t isBarometerDeadInAir_;
             int32_t isVibrating_;
-            int32_t isAcceletorOverRange_;
-            int32_t flighAction_;
+            int32_t isAcceleratorOverRange_;
+            int32_t flightAction_;
             int32_t motorStartFailedCause_;
             int32_t nonGpsCause_;
             int32_t waypointLimitMode_;

@@ -117,7 +117,7 @@ namespace DJIFR {
             /// To recalculate the information related to Summary, currently the following data is calculated:
             /// 1. maxHeight
             /// 2. maxHorizontalSpeed
-            /// 3. maxVirticalSpeed
+            /// 3. maxVerticalSpeed
             /// 4. startCoordinate
             /// 5. totalDistance
             void recalculateSummary();

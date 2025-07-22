@@ -77,8 +77,8 @@ static bool FillOSDData(const dji_fc_osd_push& data_source,
     output->set_isNotEnoughForce(data_source.sHDpcOoUTOCyuKeV);
     output->set_isBarometerDeadInAir(data_source.mOEVFFHhLfbwkMYj);
     output->set_isVibrating(data_source.zLsFXPLyQrHXFFUf);
-    output->set_isAcceletorOverRange(data_source.SBVtcuthJBEgAhpq);
-    output->set_flighAction(data_source.kRkpOaMocJqXhYiC);
+    output->set_isAcceleratorOverRange(data_source.SBVtcuthJBEgAhpq);
+    output->set_flightAction(data_source.kRkpOaMocJqXhYiC);
     output->set_motorStartFailedCause(data_source.wJpEViPlInceBxUJ);
     output->set_nonGpsCause(data_source.NDZtBUirCTogtANe);
     output->set_waypointLimitMode(data_source.aklFKRILmiQEdRGR);

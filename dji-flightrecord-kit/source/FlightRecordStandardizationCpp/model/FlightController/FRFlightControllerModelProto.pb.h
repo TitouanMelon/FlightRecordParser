@@ -1781,8 +1781,8 @@ class FlightControllerState final :
     kIsNotEnoughForceFieldNumber = 46,
     kIsBarometerDeadInAirFieldNumber = 47,
     kIsVibratingFieldNumber = 48,
-    kIsAcceletorOverRangeFieldNumber = 49,
-    kFlighActionFieldNumber = 50,
+    kIsAcceleratorOverRangeFieldNumber = 49,
+    kFlightActionFieldNumber = 50,
     kMotorStartFailedCauseFieldNumber = 51,
     kNonGpsCauseFieldNumber = 52,
     kWaypointLimitModeFieldNumber = 53,
@@ -2268,22 +2268,22 @@ class FlightControllerState final :
   void _internal_set_isvibrating(int32_t value);
   public:
 
-  // int32 isAcceletorOverRange = 49;
-  void clear_isacceletoroverrange();
-  int32_t isacceletoroverrange() const;
-  void set_isacceletoroverrange(int32_t value);
+  // int32 isAcceleratorOverRange = 49;
+  void clear_isacceleratoroverrange();
+  int32_t isacceleratoroverrange() const;
+  void set_isacceleratoroverrange(int32_t value);
   private:
-  int32_t _internal_isacceletoroverrange() const;
-  void _internal_set_isacceletoroverrange(int32_t value);
+  int32_t _internal_isacceleratoroverrange() const;
+  void _internal_set_isacceleratoroverrange(int32_t value);
   public:
 
-  // int32 flighAction = 50;
-  void clear_flighaction();
-  int32_t flighaction() const;
-  void set_flighaction(int32_t value);
+  // int32 flightAction = 50;
+  void clear_flightaction();
+  int32_t flightaction() const;
+  void set_flightaction(int32_t value);
   private:
-  int32_t _internal_flighaction() const;
-  void _internal_set_flighaction(int32_t value);
+  int32_t _internal_flightaction() const;
+  void _internal_set_flightaction(int32_t value);
   public:
 
   // int32 motorStartFailedCause = 51;
@@ -2405,8 +2405,8 @@ class FlightControllerState final :
     int32_t isnotenoughforce_;
     int32_t isbarometerdeadinair_;
     int32_t isvibrating_;
-    int32_t isacceletoroverrange_;
-    int32_t flighaction_;
+    int32_t isacceleratoroverrange_;
+    int32_t flightaction_;
     int32_t motorstartfailedcause_;
     int32_t nongpscause_;
     int32_t waypointlimitmode_;
@@ -3912,44 +3912,44 @@ inline void FlightControllerState::set_isvibrating(int32_t value) {
   // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isVibrating)
 }
 
-// int32 isAcceletorOverRange = 49;
-inline void FlightControllerState::clear_isacceletoroverrange() {
-  _impl_.isacceletoroverrange_ = 0;
+// int32 isAcceleratorOverRange = 49;
+inline void FlightControllerState::clear_isacceleratoroverrange() {
+  _impl_.isacceleratoroverrange_ = 0;
 }
-inline int32_t FlightControllerState::_internal_isacceletoroverrange() const {
-  return _impl_.isacceletoroverrange_;
+inline int32_t FlightControllerState::_internal_isacceleratoroverrange() const {
+  return _impl_.isacceleratoroverrange_;
 }
-inline int32_t FlightControllerState::isacceletoroverrange() const {
-  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isAcceletorOverRange)
-  return _internal_isacceletoroverrange();
+inline int32_t FlightControllerState::isacceleratoroverrange() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.isAcceleratorOverRange)
+  return _internal_isacceleratoroverrange();
 }
-inline void FlightControllerState::_internal_set_isacceletoroverrange(int32_t value) {
+inline void FlightControllerState::_internal_set_isacceleratoroverrange(int32_t value) {
   
-  _impl_.isacceletoroverrange_ = value;
+  _impl_.isacceleratoroverrange_ = value;
 }
-inline void FlightControllerState::set_isacceletoroverrange(int32_t value) {
-  _internal_set_isacceletoroverrange(value);
-  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isAcceletorOverRange)
+inline void FlightControllerState::set_isacceleratoroverrange(int32_t value) {
+  _internal_set_isacceleratoroverrange(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.isAcceleratorOverRange)
 }
 
-// int32 flighAction = 50;
-inline void FlightControllerState::clear_flighaction() {
-  _impl_.flighaction_ = 0;
+// int32 flightAction = 50;
+inline void FlightControllerState::clear_flightaction() {
+  _impl_.flightaction_ = 0;
 }
-inline int32_t FlightControllerState::_internal_flighaction() const {
-  return _impl_.flighaction_;
+inline int32_t FlightControllerState::_internal_flightaction() const {
+  return _impl_.flightaction_;
 }
-inline int32_t FlightControllerState::flighaction() const {
-  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.flighAction)
-  return _internal_flighaction();
+inline int32_t FlightControllerState::flightaction() const {
+  // @@protoc_insertion_point(field_get:DJIFRProto.Standard.FlightControllerState.flightAction)
+  return _internal_flightaction();
 }
-inline void FlightControllerState::_internal_set_flighaction(int32_t value) {
+inline void FlightControllerState::_internal_set_flightaction(int32_t value) {
   
-  _impl_.flighaction_ = value;
+  _impl_.flightaction_ = value;
 }
-inline void FlightControllerState::set_flighaction(int32_t value) {
-  _internal_set_flighaction(value);
-  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.flighAction)
+inline void FlightControllerState::set_flightaction(int32_t value) {
+  _internal_set_flightaction(value);
+  // @@protoc_insertion_point(field_set:DJIFRProto.Standard.FlightControllerState.flightAction)
 }
 
 // int32 motorStartFailedCause = 51;
