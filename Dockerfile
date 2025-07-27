@@ -1,4 +1,4 @@
-FROM ubuntu:16.04@sha256:a3785f78ab8547ae2710c89e627783cfa7ee7824d3468cae6835c9f4eae23ff7
+FROM ubuntu:16.04@sha256:a3785f78ab8547ae2710c89e627783cfa7ee7824d3468cae6835c9f4eae23ff7 as build
 
 ARG SDK_KEY
 ENV SDK_KEY=${SDK_KEY}
@@ -12,5 +12,12 @@ COPY . .
 
 WORKDIR /parse_flyrecord/dji-flightrecord-kit/build/Ubuntu/FRSample
 RUN sh generate.sh
+
+
+FROM ubuntu:16.04@sha256:a3785f78ab8547ae2710c89e627783cfa7ee7824d3468cae6835c9f4eae23ff7
+COPY --from=build /parse_flyrecord/dji-flightrecord-kit/build/Ubuntu/FRSample/FRSample ./
+
+ARG SDK_KEY
+ENV SDK_KEY=${SDK_KEY}
 
 ENTRYPOINT ["./FRSample"]
