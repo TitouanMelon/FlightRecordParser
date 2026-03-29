@@ -33,7 +33,10 @@ int main(int argc, char *argv[]) {
     result = parser->startRequestParser(getenv("SDK_KEY"), departmentType , [&parser](DJIFR::standardization::ServerError error_code, const std::string& error_description) {
         if (error_code == DJIFR::standardization::ServerError::Success) {
             std::shared_ptr<DJIFRProto::Standard::SummaryInformation> info = nullptr;
-            parser->summaryInformation(&info);
+            auto summary_parse_result = parser->summaryInformation(&info);
+
+            std::shared_ptr<DJIFRProto::Standard::FrameTimeStates> frame_time_list;
+            auto frame_parse_result = parser->frame_time_states(&frame_time_list);
 
             std::string summary_proto_json_string = "";
             std::string info_proto_json_string = "";
@@ -43,14 +46,18 @@ int main(int argc, char *argv[]) {
             options.always_print_primitive_fields = true;
             options.preserve_proto_field_names = true;
 
-            if (!google::protobuf::util::MessageToJsonString(*info, &summary_proto_json_string, options).ok()) {
-                summary_proto_json_string = "{}";
+            if (summary_parse_result == DJIFRProto::Standard::Success)
+            {
+                if (!google::protobuf::util::MessageToJsonString(*info, &summary_proto_json_string, options).ok()) {
+                    summary_proto_json_string = "{}";
+                }
             }
 
-            std::shared_ptr<DJIFRProto::Standard::FrameTimeStates> frame_time_list;
-            parser->frame_time_states(&frame_time_list);
-            if (!google::protobuf::util::MessageToJsonString(*frame_time_list, &info_proto_json_string, options).ok()) {
-                info_proto_json_string = "{}";
+            if (frame_parse_result == DJIFRProto::Standard::Success)
+            {
+                if (!google::protobuf::util::MessageToJsonString(*frame_time_list, &info_proto_json_string, options).ok()) {
+                    info_proto_json_string = "{}";
+                }
             }
 
             printf("{\"summary\": %s, \"info\": %s}", summary_proto_json_string.c_str(), info_proto_json_string.c_str());
@@ -59,5 +66,9 @@ int main(int argc, char *argv[]) {
             printf("error code: %d decription: %s\n", (int)error_code, error_description.c_str());
         }
     });
+
+    if (result != DJIFRProto::Standard::Success)
+        printf("\nError during parsing file : %d", (int)result);
+
     return 0;
 }
